@@ -1,7 +1,7 @@
 <template>
-  <div class="mx-auto" style="width:80%">
+  <div class="mx-auto" style="width:90%">
     <p class="text-h3 text-center font-weight-black" style="color:#FF374F">
-      500+
+      {{ title }}
     </p>
     <p class="text-center body-2">
       {{ content }}

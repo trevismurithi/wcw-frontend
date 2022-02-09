@@ -1,6 +1,6 @@
 <template>
-  <div class="my-6 mx-auto" style="width:90%">
-    <div class="d-flex flex-row justify-space-between my-12">
+  <div class="my-6 mx-auto" style="width:100%">
+    <div class="d-flex flex-row justify-space-between my-12 mx-auto" style="width:90%">
       <!-- right side content -->
       <div class="" style="width:50%">
         <p class="body-2">
@@ -38,18 +38,42 @@
       <!-- free ebook section -->
       <ebook />
       <!-- statistics section -->
-      <div class="d-flex flex-row mx-auto" style="width:80%">
-        <div>
+      <div class="d-flex flex-row mx-auto justify-space-between" style="width:80%">
+        <div class="mx-3">
           <app-reference />
         </div>
-        <div>
-          <app-reference />
+        <div class="mx-3">
+          <app-reference
+            title="96%"
+            content="Satisfaction rate from our awesome entrepreneurs"
+          />
         </div>
-        <div>
-          <app-reference />
+        <div class="mx-3">
+          <app-reference
+            title="4.9/5.0"
+            content="Average rating from our alumni"
+          />
         </div>
       </div>
     </v-card>
+    <div class="my-14" style="background-image:url('/images/courses/2ovals.png');background-size:cover;">
+      <div style="height:10vh" />
+      <div class="mx-auto" style="width:50%">
+        <p class="text-h4 font-weight-bold text-center" style="color:#FF374F;">
+          400+ Women Entrepreneurs Trust Our Programme. Be the Next!
+        </p>
+        <p class="body-2 text-center grey--text">
+          Women entrepreneurs are becoming more prevalent, which can contribute to promoting
+          economic and social fairness, as well as improve the utilization of valuable human capital
+        </p>
+      </div>
+      <div style="height:20vh" />
+      <div class="mx-auto" style="width:80%">
+        <row-social />
+        <row-social />
+      </div>
+      <div style="height:25vh" />
+    </div>
   </div>
 </template>
 
@@ -58,9 +82,10 @@ import Ebook from '~/components/courses/Ebook.vue'
 import ImageRight from '~/components/courses/ImageRight.vue'
 import RowAward from '~/components/courses/RowAward.vue'
 import AppReference from '~/components/courses/Reference.vue'
+import RowSocial from '~/components/courses/RowSocial.vue'
 export default {
   name: 'AppCourses',
-  components: { ImageRight, RowAward, Ebook, AppReference },
+  components: { ImageRight, RowAward, Ebook, AppReference, RowSocial },
   data: () => {
     return {
       awards: [

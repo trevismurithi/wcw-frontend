@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-row justify-space-around mx-auto my-6" style="width:85%">
+  <div class="d-flex flex-row justify-space-around mx-auto my-6" style="width:80%">
     <award :content="awards[0]" />
     <award :content="awards[1]" />
     <award :content="awards[2]" />
