@@ -35,16 +35,32 @@
       </div>
       <row-award />
       <row-award v-for="(award, index) in awards" :key="index" :awards="award.content" />
+      <!-- free ebook section -->
+      <ebook />
+      <!-- statistics section -->
+      <div class="d-flex flex-row mx-auto" style="width:80%">
+        <div>
+          <app-reference />
+        </div>
+        <div>
+          <app-reference />
+        </div>
+        <div>
+          <app-reference />
+        </div>
+      </div>
     </v-card>
   </div>
 </template>
 
 <script>
+import Ebook from '~/components/courses/Ebook.vue'
 import ImageRight from '~/components/courses/ImageRight.vue'
 import RowAward from '~/components/courses/RowAward.vue'
+import AppReference from '~/components/courses/Reference.vue'
 export default {
   name: 'AppCourses',
-  components: { ImageRight, RowAward },
+  components: { ImageRight, RowAward, Ebook, AppReference },
   data: () => {
     return {
       awards: [
