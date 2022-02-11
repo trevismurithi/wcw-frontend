@@ -1,5 +1,5 @@
 <template>
-  <v-card class="d-flex flex-row justify-space-between my-6" style="background-color:#FF374F;" elevation="6">
+  <v-card class="d-flex flex-row justify-space-between my-14" style="background-color:#FF374F;" elevation="10">
     <div class="d-flex flex-row" style="width:30%">
       <div class="pa-4" style="width:130px">
         <v-img :src="'/images/directory/'+image" />

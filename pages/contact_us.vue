@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <div class="py-6 text-center my-6">
-      <p class="text-h3 font-weight-bold" style="color:#FF374F">
+  <div class="mt-10">
+    <div class="py-6 text-center mt-6">
+      <p class="text-h4 font-weight-bold" style="color:#FF374F">
         Contact Us
       </p>
     </div>

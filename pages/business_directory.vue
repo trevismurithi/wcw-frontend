@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mx-auto" style="width:90%">
     <app-select />
     <graduate v-for="(image, index) in graduates" :key="index" :image="image" />
   </div>

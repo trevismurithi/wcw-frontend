@@ -24,7 +24,7 @@
         WCW is here to help you improve personally by providing the skills,
         resources, and community you need. It is completely free to join.
       </p>
-      <v-btn elevation="3" color="#FF374F" class="white--text py-6" width="150px">
+      <v-btn elevation="3" color="#FF374F" class="white--text py-6" width="150px" @click.prevent="registerNow">
         Register Now
       </v-btn>
     </div>
@@ -68,7 +68,12 @@
 
 <script>
 export default {
-  name: 'AppFooter'
+  name: 'AppFooter',
+  methods: {
+    registerNow () {
+      this.$router.push('/contact_us')
+    }
+  }
 }
 </script>
 

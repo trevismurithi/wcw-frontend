@@ -151,6 +151,7 @@
           color="#FF374F"
           class="white--text mx-6 py-6"
           width="45%"
+          @click.prevent="registerNow"
         >
           Register Now
         </v-btn>
@@ -181,7 +182,12 @@ import StepCard from '~/components/StepCard.vue'
 import Testimonials from '~/components/Testimonials.vue'
 export default {
   name: 'AppPage',
-  components: { StepCard, CardView, PartnersSponsors, Testimonials }
+  components: { StepCard, CardView, PartnersSponsors, Testimonials },
+  methods: {
+    registerNow () {
+      this.$router.push('/contact_us')
+    }
+  }
 }
 </script>
 <style>
