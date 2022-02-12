@@ -18,7 +18,7 @@
         <!-- two buttons for register and more about us -->
         <v-row class="my-6 mx-auto" style="width:50%">
           <v-col class="text-center">
-            <v-btn elevation="0" color="#FF374F" class="white--text">
+            <v-btn elevation="0" color="#FF374F" class="white--text" @click.prevent="registerNow">
               Register Now
             </v-btn>
           </v-col>
@@ -185,7 +185,7 @@ export default {
   components: { StepCard, CardView, PartnersSponsors, Testimonials },
   methods: {
     registerNow () {
-      this.$router.push('/contact_us')
+      this.$router.push('/signup')
     }
   }
 }

@@ -28,7 +28,7 @@
 
 <script>
 import ContactField from '~/components/contact/ContactField.vue'
-import ContactLocation from '~/components/contact/ContactLocation.vue'
+import ContactLocation from '~/components/contact/ContactArea.vue'
 import ContactTextArea from '~/components/contact/ContactTextArea.vue'
 export default {
   name: 'AppContactUs',

@@ -71,7 +71,7 @@ export default {
   name: 'AppFooter',
   methods: {
     registerNow () {
-      this.$router.push('/contact_us')
+      this.$router.push('/signup')
     }
   }
 }

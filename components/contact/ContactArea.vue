@@ -19,11 +19,12 @@
       </div>
     </div>
   </div>
-</template>
+</template>tas
 
 <script>
 import Location from './Location.vue'
 export default {
+  name: 'AppContactLocation',
   components: { Location },
   props: {
     location: {

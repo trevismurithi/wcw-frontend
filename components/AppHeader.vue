@@ -49,7 +49,7 @@ export default {
         },
         {
           name: 'Blog',
-          path: '/'
+          path: '/blog'
         },
         {
           name: 'Contact Us',
@@ -60,7 +60,7 @@ export default {
   },
   methods: {
     registerNow () {
-      this.$router.push('/contact_us')
+      this.$router.push('/signup')
     }
   }
 }
