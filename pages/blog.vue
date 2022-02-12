@@ -17,7 +17,7 @@
       </p>
     </div>
     <!-- slide group for various categories -->
-    <slider-group />
+    <slider-group :category="categories" />
     <!-- our blog section -->
     <div class="my-6 mx-auto" style="width:90%">
       <p class="text-h4 ml-6 font-weight-bold my-4" style="color:#FF374F;">
@@ -60,7 +60,41 @@ export default {
   components: { BlogContainer, SliderGroup, BlogCard, MainCard },
   data: () => {
     return {
-      model: null
+      model: null,
+      categories: [
+        {
+          image: 'category-2.png',
+          state: 'Community'
+        },
+        {
+          image: 'category-3.png',
+          state: 'Updates'
+        },
+        {
+          image: 'category-4.png',
+          state: 'Events'
+        },
+        {
+          image: 'category-5.png',
+          state: 'Business Talks'
+        },
+        {
+          image: 'category-2.png',
+          state: 'Community'
+        },
+        {
+          image: 'category-3.png',
+          state: 'Updates'
+        },
+        {
+          image: 'category-4.png',
+          state: 'Events'
+        },
+        {
+          image: 'category-5.png',
+          state: 'Business Talks'
+        }
+      ]
     }
   }
 }
