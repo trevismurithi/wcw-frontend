@@ -63,6 +63,10 @@ export default {
       model: null,
       categories: [
         {
+          image: 'category.png',
+          state: 'Announcements'
+        },
+        {
           image: 'category-2.png',
           state: 'Community'
         },
@@ -77,6 +81,10 @@ export default {
         {
           image: 'category-5.png',
           state: 'Business Talks'
+        },
+        {
+          image: 'category.png',
+          state: 'Announcements'
         },
         {
           image: 'category-2.png',

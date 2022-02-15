@@ -41,7 +41,7 @@ export default {
         },
         {
           name: 'Community',
-          path: '/'
+          path: '/story'
         },
         {
           name: 'Business Directory',
