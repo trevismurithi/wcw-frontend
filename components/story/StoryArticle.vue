@@ -4,7 +4,7 @@
     dark
     hide-delimiters
     class="my-10 mx-auto"
-    style="width:70%"
+    style="width:70%;"
     next-icon="mdi-arrow-right"
     prev-icon="mdi-arrow-left"
   >

@@ -14,7 +14,7 @@
       >
         <v-card
           elevation="0"
-          class=" grey lighten-4"
+          class="mx-4 grey lighten-4"
           height="200"
           width="150"
         >
@@ -43,7 +43,7 @@ export default {
   },
   data () {
     return {
-      modol: true
+      model: null
     }
   }
 }
