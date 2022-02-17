@@ -2,15 +2,15 @@
   <v-card width="100%" elevation="0">
     <v-card
       elevation="0"
-      width="70%"
+      width="80%"
       class="mx-auto my-4"
     >
-      <div style="background-image:url('/images/hero.png');background-size:contain;">
-        <v-card-text class="text-center">
+      <div>
+        <v-card-text class="text-center font-weight-bold grey--text text-h6">
           Brought to you by Graca Machel Trust
         </v-card-text>
-        <v-card-text class="text-center mx-auto text-h4 font-weight-medium" style="width:55%; color:#FF374F;">
-          A Capacity Building Entrepreneurship Accelerator Programme for Women in Africa
+        <v-card-text class="text-center mx-auto text-h3 font-weight-bold" style="width:100%; color:#FF374F;">
+          A Pan-African Movement that Grooms and Empowers Female Entrepreneurs to Become Wealth-Generating Business Women
         </v-card-text>
         <v-card-text class="text-center mx-auto" style="width:45%;">
           Connectiong 10,000+ women to transform their business and drive intra-Africa trade
@@ -24,7 +24,7 @@
           </v-col>
           <v-col class="text-center">
             <v-btn elevation="0" color="#FFCC18" outlined class="font-weight-bold">
-              More About Us
+              About Us
             </v-btn>
           </v-col>
         </v-row>
@@ -34,88 +34,48 @@
       />
     </v-card>
     <!-- start about us section -->
-    <v-row
-      class="my-2 py-16"
-      style="
-      background-color:#FF374F;
-      background-image:url('/images/mask.png');
-      background-size:contain;background-repeat:no-repeat;"
-    >
-      <v-col class="py-10">
-        <v-img
-          class="mx-auto"
-          width="60%"
-          src="/images/about.png"
-        />
-      </v-col>
-      <v-col class="d-flex align-center">
-        <div style="width:60%">
-          <p class="font-weight-bold text-h4 white--text">
-            About Us
-          </p>
-          <p class="white--text body-2">
-            For the past 6 years the Women Creating Wealth (WCW) program has helped 430 African women entrepreneurs(AWEs)
-            strengthen their entrepreneurial skills and transform their business from income generating micro-ventures into
-            impactful wealth creating Enterprises.
-          </p>
-          <div class="d-flex align-center" style="color:#FFCC18">
-            More About Us
-            <v-icon style="color:#FFCC18">
-              mdi-arrow-right
-            </v-icon>
+    <div style="background-color:#E41A4A;">
+      <v-row
+        class="my-2 pa-4 mx-auto"
+        style="width:80%"
+      >
+        <v-col class="d-flex justify-center pa-4">
+          <div class="pa-4" style="width:80%">
+            <v-img
+              src="/images/about.png"
+            />
           </div>
-        </div>
-      </v-col>
-    </v-row>
+        </v-col>
+        <v-col class="d-flex align-center">
+          <div style="width:100%">
+            <p class="font-weight-bold text-h4 white--text">
+              About Us
+            </p>
+            <p class="white--text body-2">
+              For the past 6 years the Women Creating Wealth (WCW) program has helped 430 African women entrepreneurs(AWEs)
+              strengthen their entrepreneurial skills and transform their business from income generating micro-ventures into
+              impactful wealth creating Enterprises.
+            </p>
+            <div class="d-flex align-center" style="color:#FFCC18">
+              More About Us
+              <v-icon style="color:#FFCC18">
+                mdi-arrow-right
+              </v-icon>
+            </div>
+          </div>
+        </v-col>
+      </v-row>
+    </div>
     <!-- end of the about us section -->
     <!-- Our patners section -->
-    <div class="d-flex flex-column justify-center" style="height:300px">
-      <v-card-text class="mx-auto text-h4 font-weight-bold my-4" style="width:40%; color:#FF374F;">
+    <div class="mx-auto my-14" style="width:80%">
+      <v-card-text class="mx-auto text-h4 font-weight-bold my-4 text-center" style="color:#FF374F;">
         Our Patners and Sponsors
       </v-card-text>
       <partners-sponsors />
     </div>
-    <!-- start of the step section -->
-    <v-card
-      elevation="0"
-      class="mx-auto"
-      width="80%"
-    >
-      <v-card-text class="text-center mx-auto text-h4 font-weight-bold" style="width:70%; color:#FF374F;">
-        How do we support women on their journey to wealth creation?
-      </v-card-text>
-      <div
-        class="d-flex justify-space-between mx-auto my-4"
-        style="width:70%"
-      >
-        <step-card />
-        <step-card
-          :value="2"
-          title="Step 2"
-          body="We encourage and prepare women entrepreneurs to
-          improve their business formalization and
-          compliance in order to minimise risks and boost market access."
-        />
-      </div>
-      <div
-        class="d-flex justify-space-between mx-auto my-4"
-        style="width:70%"
-      >
-        <step-card
-          :value="3"
-          title="Step 3"
-          body="With lots of unique blocks, you can easily build a page without coding."
-        />
-        <step-card
-          :value="4"
-          title="Step 4"
-          body="With lots of unique blocks, you can easily build a page without coding"
-        />
-      </div>
-    </v-card>
-    <!-- end of step section -->
     <!-- start what you will get -->
-    <v-card-text class="text-center mx-auto text-h4 font-weight-bold mt-10" style="width:50%; color:#FF374F;">
+    <v-card-text class="text-center mx-auto text-h4 font-weight-bold mt-14" style="width:50%; color:#FF374F;">
       What you Will Get
     </v-card-text>
     <container />
@@ -178,11 +138,10 @@
 <script>
 import PartnersSponsors from '~/components/PatnersSponsors.vue'
 import CardView from '~/components/CardView.vue'
-import StepCard from '~/components/StepCard.vue'
 import Testimonials from '~/components/Testimonials.vue'
 export default {
   name: 'AppPage',
-  components: { StepCard, CardView, PartnersSponsors, Testimonials },
+  components: { CardView, PartnersSponsors, Testimonials },
   methods: {
     registerNow () {
       this.$router.push('/signup')
