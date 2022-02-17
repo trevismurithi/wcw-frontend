@@ -29,7 +29,7 @@ export default {
         },
         {
           name: 'About Us',
-          path: '/'
+          path: '/about_us'
         },
         {
           name: 'Online Courses',
