@@ -17,7 +17,7 @@
       class="d-flex flex-column justify-center my-10 align-center"
       style="height:500px;background-image:url('/images/BG.png');background-size:cover;background-position:center;"
     >
-      <p class="text-h3 white--text font-weight-black text-center" style="width:50%">
+      <p class="text-h3 white--text font-weight-bold text-center" style="width:50%">
         Are you ready to enhance your entrepreneurial skills, knowledge and confidence?
       </p>
       <p class="white--text body-2 mb-6" style="width:35%">
@@ -30,19 +30,13 @@
     </div>
     <!-- footer navigation section -->
     <div class="d-flex flex-row justify-space-around my-4 mx-auto" style="width:70%">
-      <div v-for="index in 3" :key="index" class="mx-4">
+      <div v-for="(nav,index) in navigation" :key="index" class="mx-4">
         <p class="font-weight-bold text-subtitle">
-          Community
+          {{ paths[index] }}
         </p>
         <div>
-          <p class="text-caption">
-            Connect & Inspire
-          </p>
-          <p class="text-caption">
-            Access to Funding
-          </p>
-          <p class="text-caption">
-            Podcast
+          <p v-for="(name,i) in nav" :key="i" class="text-caption">
+            {{ name.name }}
           </p>
         </div>
       </div>
@@ -69,6 +63,56 @@
 <script>
 export default {
   name: 'AppFooter',
+  data: () => {
+    return {
+      paths: ['Community', 'About Us', 'Useful'],
+      navigation: [
+        [
+          {
+            name: 'Connect & Inspire',
+            path: ''
+          },
+          {
+            name: 'Access to Funding',
+            path: ''
+          },
+          {
+            name: 'Podcast',
+            path: ''
+          }
+        ],
+        [
+          {
+            name: 'Meet the Team',
+            path: ''
+          },
+          {
+            name: 'Our Story',
+            path: ''
+          },
+          {
+            name: 'Career',
+            path: ''
+          }
+        ],
+        [
+          {
+            name: 'Blog',
+            path: ''
+          },
+          {
+            name: 'Podcast',
+            path: ''
+          },
+          {
+            name: 'Videos',
+            path: ''
+          }
+        ]
+      ]
+
+    }
+  },
   methods: {
     registerNow () {
       this.$router.push('/signup')

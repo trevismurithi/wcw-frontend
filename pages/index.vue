@@ -80,6 +80,10 @@
     </v-card-text>
     <container />
     <!-- end of what you will get -->
+    <!-- Ignite Accelerator course -->
+    <home-ignite />
+    <!-- business community section -->
+    <home-community />
     <div class="d-flex flex-column justify-center" style="height:300px">
       <v-card-text class="text-center mx-auto text-h4 font-weight-bold mt-10" style="width:40%; color:#FF374F;">
         From Income Generation to Wealth Creation
@@ -90,58 +94,18 @@
         their growth journey and make the WCW dream a reality
       </v-card-text>
     </div>
-    <!-- connect and inspire section -->
-    <card-view />
-    <!-- access to market -->
-    <v-row class="my-6 mx-auto" style="width:70%">
-      <v-col style="width:50%">
-        <v-img src="/images/image-3.png" width="100%" />
-      </v-col>
-      <v-col class="d-flex flex-column justify-center">
-        <p class="text-h4 font-weight-bold mx-6">
-          ACCESS TO MARKET
-        </p>
-        <p class="mx-6 body-2">
-          A platform that facilitates market access through a
-          business directory, market champions,
-          highliting deal opportunities and industry engagement.
-        </p>
-        <v-btn
-          elevation="0"
-          color="#FF374F"
-          class="white--text mx-6 py-6"
-          width="45%"
-          @click.prevent="registerNow"
-        >
-          Register Now
-        </v-btn>
-      </v-col>
-    </v-row>
-    <!-- Access funding -->
-    <card-view
-      image="image-2.png"
-      heading="ACCESS TO FUNDING"
-      context="A knowledge platform that is facilitated
-      through financial wellness, pitching practices,
-      investor showcasing and wealth management coaching."
-      sub-h="Get the right funding"
-      sub-h2="Perfect your pitch"
-      sub-h3="Understand investor relations"
-      sub-c="You'll need a way to finance a business in order to accomplish your business aspirations."
-      sub-c2="Obtaining finance requires an impressive pitch deck to persuade investors."
-      sub-c3="Investors are in the business of putting money into companies that are growing."
-    />
     <testimonials />
   </v-card>
 </template>
 
 <script>
 import PartnersSponsors from '~/components/PatnersSponsors.vue'
-import CardView from '~/components/CardView.vue'
 import Testimonials from '~/components/Testimonials.vue'
+import HomeIgnite from '~/components/HomeIgnite.vue'
+import HomeCommunity from '~/components/HomeCommunity.vue'
 export default {
   name: 'AppPage',
-  components: { CardView, PartnersSponsors, Testimonials },
+  components: { PartnersSponsors, Testimonials, HomeIgnite, HomeCommunity },
   methods: {
     registerNow () {
       this.$router.push('/signup')

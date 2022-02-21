@@ -1,9 +1,9 @@
 <template>
   <div class="my-10 mx-auto" style="width:80%">
-    <div class="my-10">
+    <!-- <div class="my-10">
       <v-img src="/images/heart.svg" width="50px" />
-    </div>
-    <p class="text-h3 font-weight-bold" style="color:#FF374F;width:80%">
+    </div> -->
+    <p class="text-h3 font-weight-bold text-center mx-auto" style="color:#FF374F;width:80%">
       400+ Women are loving the Women Creating Wealth Programme
     </p>
     <div class="d-flex justify-space-around">
@@ -29,17 +29,17 @@ export default {
         {
           image: 'testimony.svg',
           text: "The training and tools given by the experts who taught the various modules, culminated in'mock pitches' to investors.",
-          name: 'Acanda Jaswa'
+          name: '@acandajaswa'
         },
         {
           image: 'testimony-2.svg',
           text: 'After a few sessions I gained confidence in myself, especially knowing and acknowledging my business stage.',
-          name: 'Mmatlou Mabitsela'
+          name: '@mmatloumabitsela'
         },
         {
           image: 'testimony-3.svg',
           text: 'I now know how to give praise when my staff have done things right. I also learnt how to Know, Find and Grow My Money.',
-          name: 'Dikonelo Motseki'
+          name: '@dikonelomotseki'
         }
       ]
     }

@@ -1,21 +1,52 @@
 <template>
-  <div class="py-14">
+  <div class="py-6">
     <div
       class="py-14 mx-auto"
-      style="background-image:url('/images/story/background.png');background-size:contain;width:90%;"
+      style="width:90%;"
     >
       <intro />
-      <story-slider-group :category="categories" />
     </div>
-    <div class="py-14">
-      <story-image-left />
-      <story-image-right />
-      <story-image-left
-        image="stage-3.png"
-        title="ACCES TO FUNDING KNOWLEDGE"
-        body="Access to funding is facilitated through financial wellness, pitching practices, investor showcasing and wealth management."
-      />
-    </div>
+    <!-- connect and inspire section -->
+    <card-view />
+    <!-- access to market -->
+    <v-row class="my-6 mx-auto" style="width:70%">
+      <v-col style="width:50%">
+        <v-img src="/images/image-3.png" width="100%" />
+      </v-col>
+      <v-col class="d-flex flex-column justify-center">
+        <p class="text-h4 font-weight-bold mx-6">
+          ACCESS TO MARKET
+        </p>
+        <p class="mx-6 body-2">
+          A platform that facilitates market access through a
+          business directory, market champions,
+          highliting deal opportunities and industry engagement.
+        </p>
+        <v-btn
+          elevation="0"
+          color="#FF374F"
+          class="white--text mx-6 py-6"
+          width="45%"
+          @click.prevent="registerNow"
+        >
+          Register Now
+        </v-btn>
+      </v-col>
+    </v-row>
+    <!-- Access funding -->
+    <card-view
+      image="image-2.png"
+      heading="ACCESS TO FUNDING"
+      context="A knowledge platform that is facilitated
+      through financial wellness, pitching practices,
+      investor showcasing and wealth management coaching."
+      sub-h="Get the right funding"
+      sub-h2="Perfect your pitch"
+      sub-h3="Understand investor relations"
+      sub-c="You'll need a way to finance a business in order to accomplish your business aspirations."
+      sub-c2="Obtaining finance requires an impressive pitch deck to persuade investors."
+      sub-c3="Investors are in the business of putting money into companies that are growing."
+    />
     <div class="mx-auto rounded-lg" style="background-color:#FF374F;width:80%">
       <div class="mx-auto pt-10 text-center" style="width:60%">
         <p class="white--text font-weight-medium text-h4">
@@ -49,13 +80,12 @@
 <script>
 import Intro from '~/components/Intro.vue'
 import StoryColumn from '~/components/story/StoryColumn.vue'
-import StoryImageLeft from '~/components/story/StoryImageLeft.vue'
-import StoryImageRight from '~/components/story/StoryImageRight.vue'
-import StorySliderGroup from '~/components/story/StorySliderGroup.vue'
 import StoryArticle from '~/components/story/StoryArticle.vue'
+import CardView from '~/components/CardView.vue'
+
 export default {
   name: 'AppStoryPage',
-  components: { Intro, StorySliderGroup, StoryImageLeft, StoryImageRight, StoryColumn, StoryArticle },
+  components: { CardView, Intro, StoryColumn, StoryArticle },
   data () {
     return {
       categories: [
