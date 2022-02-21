@@ -2,23 +2,37 @@
   <div class="my-6 mx-auto" style="width:100%">
     <div class="d-flex flex-row justify-space-between my-12 mx-auto" style="width:90%">
       <!-- right side content -->
-      <div class="" style="width:50%">
-        <p class="body-2">
+      <div class="" style="width:40%">
+        <p class="text-h6 font-weight-bold grey--text">
           Develop your skills and confidence
         </p>
         <p class="text-h4 font-weight-bold" style="color:#FF374F">
           Join Ignite online courses and workshops
         </p>
+        <p class="body-2">
+          IGNITE is a 5-10 months learning intervention that covers 5
+          blended-learning modules that will help the women
+          entrepreneurs develop their skills, confidence and knowledge
+        </p>
       </div>
       <!-- pink divider -->
-      <div class="my-4" style="background-color:#FF374F;width:1px;" />
+      <div class="my-4" style="background-color:#FF374F;width:2px;" />
       <!-- left side content -->
-      <div class="body-2 d-flex align-center" style="width:35%">
-        <p class="my-2">
-          Women Creating Wealth is a Pan African entrepreneurship programme that has significantly
-          grown the businesses and positively impacted the entrepreneurial behaviours, skills and
-          confidence of women entrepreneurs.
-        </p>
+      <div class="d-flex justify-center align-center" style="width:35%">
+        <div class="rounded-lg " style="border:2px solid black;width:80%">
+          <v-card class="pa-4" rounded="lg">
+            <div class="">
+              <p class="font-weight-bold text-h6">
+                5 Modules
+              </p>
+            </div>
+            <div class="mx-auto" style="width:100%">
+              <p v-for="(text,index) in list" :key="index" class="my-0 body-2 font-weight-light">
+                {{ index+1 }}. {{ text }}
+              </p>
+            </div>
+          </v-card>
+        </div>
       </div>
     </div>
     <!-- image of two people -->
@@ -38,7 +52,7 @@
       <!-- free ebook section -->
       <ebook />
       <!-- statistics section -->
-      <div class="d-flex flex-row mx-auto justify-space-between" style="width:80%">
+      <!-- <div class="d-flex flex-row mx-auto justify-space-between" style="width:80%">
         <div class="mx-3">
           <app-reference />
         </div>
@@ -54,9 +68,9 @@
             content="Average rating from our alumni"
           />
         </div>
-      </div>
+      </div> -->
     </v-card>
-    <div class="my-14" style="background-image:url('/images/courses/2ovals.png');background-size:cover;">
+    <!-- <div class="my-14" style="background-image:url('/images/courses/2ovals.png');background-size:cover;">
       <div style="height:10vh" />
       <div class="mx-auto" style="width:50%">
         <p class="text-h4 font-weight-bold text-center" style="color:#FF374F;">
@@ -73,7 +87,7 @@
         <row-social />
       </div>
       <div style="height:25vh" />
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -81,11 +95,10 @@
 import Ebook from '~/components/courses/Ebook.vue'
 import ImageRight from '~/components/courses/ImageRight.vue'
 import RowAward from '~/components/courses/RowAward.vue'
-import AppReference from '~/components/courses/Reference.vue'
-import RowSocial from '~/components/courses/RowSocial.vue'
+
 export default {
   name: 'AppCourses',
-  components: { ImageRight, RowAward, Ebook, AppReference, RowSocial },
+  components: { ImageRight, RowAward, Ebook },
   data: () => {
     return {
       awards: [
@@ -95,6 +108,13 @@ export default {
         {
           content: ['Understing people 101.', '10 secrets to solve any problem easily.', 'Creating valuable goal for next 5 years.']
         }
+      ],
+      list: [
+        'Personal mastery and leadership',
+        'Demand & gearing for growth',
+        'Scaling through systemization',
+        'Winning markets',
+        'know, find and grow your money'
       ]
     }
   }
