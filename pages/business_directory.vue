@@ -1,7 +1,14 @@
 <template>
   <div class="mx-auto" style="width:90%">
     <app-select />
-    <graduate v-for="(image, index) in graduates" :key="index" :image="image" />
+    <v-row>
+      <v-col>
+        <graduate v-for="(image, index) in graduates" :key="index" :image="image" />
+      </v-col>
+      <v-col>
+        <graduate v-for="(image, index) in graduates.reverse()" :key="index" :image="image" />
+      </v-col>
+    </v-row>
   </div>
 </template>
 

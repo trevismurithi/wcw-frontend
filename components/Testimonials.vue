@@ -1,5 +1,5 @@
 <template>
-  <div class="my-10 mx-auto" style="width:80%">
+  <div class="my-14 mx-auto" style="width:80%">
     <!-- <div class="my-10">
       <v-img src="/images/heart.svg" width="50px" />
     </div> -->

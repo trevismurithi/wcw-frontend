@@ -29,14 +29,14 @@
           </v-col>
         </v-row>
       </div>
-      <v-img
-        src="/images/frame.png"
-      />
     </v-card>
+    <v-img
+      src="/images/frame.jpg"
+    />
     <!-- start about us section -->
     <div style="background-color:#E41A4A;">
       <v-row
-        class="my-2 pa-4 mx-auto"
+        class="mb-2 pa-4 mx-auto"
         style="width:80%"
       >
         <v-col class="d-flex justify-center pa-4">
@@ -84,16 +84,6 @@
     <home-ignite />
     <!-- business community section -->
     <home-community />
-    <div class="d-flex flex-column justify-center" style="height:300px">
-      <v-card-text class="text-center mx-auto text-h4 font-weight-bold mt-10" style="width:40%; color:#FF374F;">
-        From Income Generation to Wealth Creation
-      </v-card-text>
-      <v-card-text class="text-center mx-auto body-2 font-weight-light grey--text" style="width:40%;">
-        The WCW Business Community is a post-WCW graduation three year support
-        intervention to help increase the performance of the alumni in
-        their growth journey and make the WCW dream a reality
-      </v-card-text>
-    </div>
     <testimonials />
   </v-card>
 </template>
