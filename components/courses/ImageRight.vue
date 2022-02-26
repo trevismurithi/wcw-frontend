@@ -14,7 +14,19 @@
         We will announce opportunities when they come available please look out on Social Media,
         our Website, Newsletter and through your network for Calls for Applications.
       </p>
-      <div class="mx-6" style="width:fit-content">
+      <p class="mx-6 body-1 font-weight-bold my-1">
+        Minimum Eligibility
+      </p>
+      <p class="mx-6 body-2 my-1">
+        <span class="font-weight-bold">1.</span>Ambitous and hungry for growth
+      </p>
+      <p class="mx-6 body-2 my-1">
+        <span class="font-weight-bold">2.</span>Must be in business for less than 12 months
+      </p>
+      <p class="mx-6 body-2 my-1">
+        <span class="font-weight-bold">3.</span>Secondary school certification
+      </p>
+      <div class="mx-6 mt-4" style="width:fit-content">
         <p class="body-2 my-1" style="color:#FF374F;">
           Calls for Application
         </p>

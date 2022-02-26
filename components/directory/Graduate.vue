@@ -1,41 +1,44 @@
 <template>
-  <v-card class="d-flex flex-row my-14" style="background-color:#FF374F;" elevation="10">
+  <v-card class="d-flex flex-row my-14" elevation="10">
     <div class="d-flex flex-row align-center">
       <div class="pa-4">
-        <v-img :src="'/images/directory/'+image" />
-        <div class="d-flex">
-          <v-icon class="white--text">
-            mdi-email
-          </v-icon>
-          <p class="caption white--text my-2 mx-2">
-            {{ email }}
-          </p>
-        </div>
-        <div class="d-flex">
-          <v-icon class="white--text">
+        <v-img class="rounded-circle my-2" :src="'/images/directory/'+image" />
+        <div class="d-flex mt-6">
+          <v-icon class="green--text darken-3">
             mdi-whatsapp
           </v-icon>
-          <p class="caption white--text my-2 mx-2">
+          <p class="caption  my-0 mx-2">
             {{ whatsapp }}
           </p>
         </div>
-        <p class="caption white--text my-2">
-          Country: {{ country }}
-        </p>
+        <div class="d-flex">
+          <v-icon style="color:#E41A4A">
+            mdi-email
+          </v-icon>
+          <p class="caption my-0  mx-2">
+            {{ email }}
+          </p>
+        </div>
       </div>
       <div class="mx-2 my-4 d-flex flex-column">
-        <p class="white--text title">
+        <p class="title">
           {{ name }}
         </p>
-        <p class="yellow--text title font-weight-black">
+        <p class="title font-weight-black">
           {{ company }}
         </p>
-        <p class="body-2 white--text">
+        <p class="body-2">
           Industry: {{ industry }}
         </p>
-        <v-btn color="yellow" outlined width="50%">
+        <v-btn color="#E41A4A" outlined width="50%">
           connect
         </v-btn>
+        <div class="mx-auto d-flex justify-space-between mt-4" style="width:80%">
+          <div />
+          <p class="caption my-2">
+            Country: {{ country }}
+          </p>
+        </div>
       </div>
     </div>
   </v-card>

@@ -27,8 +27,28 @@
 <script>
 import HomeCommunityCard from './HomeCommunityCard.vue'
 export default {
-  components: { HomeCommunityCard }
-
+  components: { HomeCommunityCard },
+  data () {
+    return {
+      market: [
+        {
+          image: 'com-2.png',
+          title: 'Market Access & Readiness',
+          context: 'A platform that facilitates market access through a business directory,' +
+           'market champions who highlight opportunities and industry engagements.' +
+           'In addition it increases your brand visibility.'
+        }
+      ],
+      finance: [
+        {
+          image: 'com-3.png',
+          title: 'Finance Access & Readiness',
+          context: 'A knowledge platform that offers financial wellness, pitching practices, investor ' +
+                    'showcasing and wealth management coaching.'
+        }
+      ]
+    }
+  }
 }
 </script>
 

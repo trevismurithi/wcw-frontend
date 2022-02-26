@@ -13,7 +13,9 @@ export default {
   props: {
     awards: {
       type: Array,
-      default: () => ['How to improve yourself with small tasks.', 'How to utilize your time while working hard.', 'How to think creatively.']
+      default: () => ['Connection of your life purpose to your business strategic objective',
+        'Emotional intelligence self and social awareness and skills',
+        'Starting innovative business ventures']
     }
   }
 

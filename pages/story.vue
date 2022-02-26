@@ -47,6 +47,7 @@
       sub-c2="Obtaining finance requires an impressive pitch deck to persuade investors."
       sub-c3="Investors are in the business of putting money into companies that are growing."
     />
+    <!-- big card with many images -->
     <div class="mx-auto rounded-lg" style="background-color:#FF374F;width:80%">
       <div class="mx-auto pt-10 text-center" style="width:60%">
         <p class="white--text font-weight-medium text-h4">

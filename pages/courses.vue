@@ -103,10 +103,14 @@ export default {
     return {
       awards: [
         {
-          content: ['Solving your problems without hurting yourself.', 'Making money smartly.', 'Developing new skills fast and furious!']
+          content: ['Systemize your business to scale for growth',
+            'Marketing & sales, value & supply chains to win markets',
+            'Financial Management']
         },
         {
-          content: ['Understing people 101.', '10 secrets to solve any problem easily.', 'Creating valuable goal for next 5 years.']
+          content: ['Ensuring the compliance of your business',
+            'Investor readiness tips and practises',
+            'How to collaborate creatively']
         }
       ],
       list: [

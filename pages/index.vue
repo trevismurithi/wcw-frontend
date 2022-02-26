@@ -10,7 +10,7 @@
           Brought to you by Graca Machel Trust
         </v-card-text>
         <v-card-text class="text-center mx-auto text-h3 font-weight-bold" style="width:100%; color:#FF374F;">
-          A Pan-African Movement that Grooms and Empowers Female Entrepreneurs to Become Wealth-Generating Business Women
+          A Pan- African Movement that inspires and equips female entrepreneurs to build wealth-generating businesses.
         </v-card-text>
         <v-card-text class="text-center mx-auto" style="width:45%;">
           Connectiong 10,000+ women to transform their business and drive intra-Africa trade
@@ -29,10 +29,10 @@
           </v-col>
         </v-row>
       </div>
+      <v-img
+        src="/images/frame.png"
+      />
     </v-card>
-    <v-img
-      src="/images/frame.jpg"
-    />
     <!-- start about us section -->
     <div style="background-color:#E41A4A;">
       <v-row
@@ -52,9 +52,11 @@
               About Us
             </p>
             <p class="white--text body-2">
-              For the past 6 years the Women Creating Wealth (WCW) program has helped 430 African women entrepreneurs(AWEs)
-              strengthen their entrepreneurial skills and transform their business from income generating micro-ventures into
-              impactful wealth creating Enterprises.
+              WCW is an Entrepreneurship Development
+              Programme that inspires, upskills and connects
+              women in Africa to transform their businesses
+              from income generation to wealth creation
+              enterprises.
             </p>
             <div class="d-flex align-center" style="color:#FFCC18">
               More About Us
