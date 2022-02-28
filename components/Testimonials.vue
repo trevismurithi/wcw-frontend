@@ -3,7 +3,7 @@
     <!-- <div class="my-10">
       <v-img src="/images/heart.svg" width="50px" />
     </div> -->
-    <p class="text-h3 font-weight-bold text-center mx-auto" style="color:#FF374F;width:80%">
+    <p class="text-h3 font-weight-medium text-center mx-auto" style="color:#FF374F;width:80%">
       400+ Women are loving the Women Creating Wealth Programme
     </p>
     <div class="d-flex justify-space-around">

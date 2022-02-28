@@ -6,13 +6,13 @@
       class="mx-auto my-4"
     >
       <div>
-        <v-card-text class="text-center font-weight-bold grey--text text-h6">
+        <v-card-text class="text-center font-weight-medium grey--text text-h6">
           Brought to you by Graca Machel Trust
         </v-card-text>
         <v-card-text class="text-center mx-auto text-h3" style="width:100%; color:#FF374F;">
-          A Pan- African Movement that inspires and equips female entrepreneurs to build wealth-generating businesses.
+          A Pan-African Movement that inspires and equips female entrepreneurs to build wealth-generating businesses.
         </v-card-text>
-        <v-card-text class="text-center mx-auto montserrate-font" style="width:45%;">
+        <v-card-text class="text-center mx-auto poppins-font" style="width:45%;">
           Connectiong 10,000+ women to transform their business and drive intra-Africa trade
         </v-card-text>
         <!-- two buttons for register and more about us -->
@@ -48,8 +48,16 @@
         </v-col>
         <v-col class="d-flex align-center">
           <div style="width:100%">
-            <p class="font-weight-bold text-h4 white--text">
+            <p class="font-weight-medium text-h4 white--text">
               About Us
+            </p>
+            <p class="white--text body-2">
+              We believe more capital in the hands of
+              women will go a long way in addressing
+              our major socio-economic challenges because
+              research shows women generally spend more
+              of their money on the health, education
+              and well-being of their families and communities.
             </p>
             <p class="white--text body-2">
               WCW is an Entrepreneurship Development
@@ -71,13 +79,13 @@
     <!-- end of the about us section -->
     <!-- Our patners section -->
     <div class="mx-auto my-14" style="width:80%">
-      <v-card-text class="mx-auto text-h4 font-weight-bold my-4 text-center" style="color:#FF374F;">
+      <v-card-text class="mx-auto text-h4 font-weight-medium my-4 text-center" style="color:#FF374F;">
         Our Patners and Sponsors
       </v-card-text>
       <partners-sponsors />
     </div>
     <!-- start what you will get -->
-    <v-card-text class="text-center mx-auto text-h4 font-weight-bold mt-14" style="width:50%; color:#FF374F;">
+    <v-card-text class="text-center mx-auto text-h4 font-weight-medium mt-14" style="width:50%; color:#FF374F;">
       What you Will Get
     </v-card-text>
     <container />
@@ -106,7 +114,7 @@ export default {
 }
 </script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
   .montserrate-font{
     font-family: 'Montserrat', sans-serif !important;
   }

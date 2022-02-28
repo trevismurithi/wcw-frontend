@@ -7,7 +7,7 @@
       </div>
       <div class="d-flex flex-column justify-center pa-4" style="background-color:black;">
         <div class="my-4">
-          <p class="text-h5 white--text font-weight-bold">
+          <p class="text-h5 white--text font-weight-medium">
             Enhanced Capacity to Grow
           </p>
           <p class="body-2 white--text font-weight-light">
@@ -15,7 +15,7 @@
           </p>
         </div>
         <div class="my-4">
-          <p class="text-h5 white--text font-weight-bold">
+          <p class="text-h5 white--text font-weight-medium">
             Resources to Improve Business Formalisation
           </p>
           <p class="body-2 white--text font-weight-light">
@@ -32,7 +32,7 @@
       </div>
       <div class="d-flex flex-column justify-center pa-4" style="background-color:black;">
         <div class="my-4">
-          <p class="text-h5 white--text font-weight-bold">
+          <p class="text-h5 white--text font-weight-medium">
             Market Investment Readiness
           </p>
           <p class="body-2 white--text font-weight-light">
@@ -40,7 +40,7 @@
           </p>
         </div>
         <div class="my-4">
-          <p class="text-h5 white--text font-weight-bold">
+          <p class="text-h5 white--text font-weight-medium">
             Value-Generating Business Community
           </p>
           <p class="body-2 white--text font-weight-light">

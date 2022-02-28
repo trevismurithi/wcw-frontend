@@ -1,11 +1,11 @@
 <template>
-  <v-card class="rounded-lg" width="300px">
+  <v-card class="rounded-lg" width="300px" elevation="0">
     <div class="text-center rounded-lg my-2" style="border:2px solid #E41A4A;">
       <p class="pa-4 text-h6 my-0">
         {{ card[0].title }}
       </p>
     </div>
-    <div class="rounded-lg" style="border:2px solid #E41A4A;">
+    <div class="rounded-lg" style="border:2px solid #E41A4A;height:80%">
       <div>
         <v-img :src="'/images/' + card[0].image" />
       </div>
