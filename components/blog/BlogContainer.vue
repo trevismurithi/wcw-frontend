@@ -19,7 +19,7 @@
                 attitudes towards traditional ways of doing business are changing.
               </p>
               <div style="width:fit-content">
-                <p class="body-2 my-1 yellow--text">
+                <p class="poppins-font my-1 yellow--text">
                   Read More
                 </p>
                 <div class="ma-0 yellow" style="width:100%;height:2px;" />

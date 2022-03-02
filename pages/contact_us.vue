@@ -1,7 +1,7 @@
 <template>
   <div class="mt-10">
     <div class="py-6 text-center mt-6">
-      <p class="text-h4 font-weight-bold" style="color:#FF374F">
+      <p class="text-h3 font-weight-medium" style="color:#FF374F">
         Contact Us
       </p>
     </div>
@@ -18,7 +18,7 @@
         <contact-field label="Last Name" entry="Enter your last name" />
         <contact-field label="Your Email" entry="Enter your email" />
         <contact-text-area />
-        <v-btn class="white--text py-4" color="#FF374F" width="20%">
+        <v-btn class="white--text py-4 poppins-font" color="#FF374F" width="20%">
           send
         </v-btn>
       </v-col>

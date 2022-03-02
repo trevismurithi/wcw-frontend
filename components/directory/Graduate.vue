@@ -21,16 +21,16 @@
         </div>
       </div>
       <div class="mx-2 my-4 d-flex flex-column">
-        <p class="title">
+        <p class="poppins-font">
           {{ name }}
         </p>
-        <p class="title font-weight-black">
+        <p class="title font-weight-bold">
           {{ company }}
         </p>
         <p class="body-2">
           Industry: {{ industry }}
         </p>
-        <v-btn color="#E41A4A" outlined width="50%">
+        <v-btn color="#E41A4A" outlined width="50%" class="poppins-font">
           connect
         </v-btn>
         <div class="mx-auto d-flex justify-space-between mt-4" style="width:80%">

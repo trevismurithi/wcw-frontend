@@ -19,7 +19,7 @@
           width="150"
         >
           <v-img :src="'/images/blog/'+n.image" />
-          <p class="body-2 font-weight-black text-center my-2" style="color:#FF374F;">
+          <p class="font-weight-bold text-center my-2" style="color:#FF374F;">
             {{ n.state }}
           </p>
         </v-card>

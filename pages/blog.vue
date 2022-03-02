@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="my-6 mx-auto" style="width:90%">
-      <p class="text-h4 ml-6 font-weight-bold my-4" style="color:#FF374F;">
+      <p class="text-h4 ml-6 font-weight-medium my-4" style="color:#FF374F;">
         Featured Readings
       </p>
     </div>
@@ -12,7 +12,7 @@
     </div>
     <!-- explore in categories -->
     <div class="my-10 mx-auto" style="width:90%">
-      <p class="text-h4 ml-6 font-weight-bold my-4" style="color:#FF374F;">
+      <p class="text-h4 ml-6 font-weight-medium my-4" style="color:#FF374F;">
         Explore in categories
       </p>
     </div>
