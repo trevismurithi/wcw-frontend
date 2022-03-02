@@ -23,7 +23,7 @@
             </v-btn>
           </v-col>
           <v-col class="text-center">
-            <v-btn elevation="0" color="#FFCC18" outlined class="poppins-font">
+            <v-btn elevation="0" color="#FFCC18" outlined class="poppins-font px-4">
               About Us
             </v-btn>
           </v-col>
@@ -114,14 +114,4 @@ export default {
 }
 </script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-  .montserrate-font{
-    font-family: 'Montserrat', sans-serif !important;
-  }
- .dm-serif-font{
-   font-family: 'DM Serif Display', sans-serif !important;
- }
- .poppins-font{
-   font-family: 'Poppins', sans-serif !important;
- }
 </style>

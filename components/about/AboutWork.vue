@@ -8,7 +8,7 @@
         <p class="text-h5 font-weight-medium">
           Our Solution
         </p>
-        <p class="body-2 font-weight-light">
+        <p class="caption font-weight-light">
           We inspire a growth mindset. We equip women with entrepreneurial skills,
           knowledge, and confidence to scale their businesses.  We create an
           environment that builds supportive relationships, fosters networking
@@ -27,7 +27,7 @@
         <p class="body-2 font-weight-light">
           We use the GAIM methodology:
         </p>
-        <p v-for="(step,index) in steps" :key="index" class="body-2 font-weight-light">
+        <p v-for="(step,index) in steps" :key="index" class="caption font-weight-light">
           {{ step }}
         </p>
       </div>

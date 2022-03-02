@@ -8,12 +8,12 @@
       </nuxt-link>
     </v-toolbar-title>
     <v-btn
-      class="font-weight-medium white--text px-4 mx-2"
+      class="font-weight-medium white--text px-4 mx-2 poppins-font"
       color="#FF374F"
       elevation="0"
       @click.prevent="registerNow"
     >
-      register
+      register now
     </v-btn>
   </v-app-bar>
 </template>

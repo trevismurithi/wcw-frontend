@@ -19,5 +19,14 @@ export default {
 </script>
 
 <style>
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+  .montserrate-font{
+    font-family: 'Montserrat', sans-serif !important;
+  }
+ .dm-serif-font{
+   font-family: 'DM Serif Display', sans-serif !important;
+ }
+ .poppins-font{
+   font-family: 'Poppins', sans-serif !important;
+ }
 </style>

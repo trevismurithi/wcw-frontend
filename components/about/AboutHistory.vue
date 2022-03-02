@@ -2,7 +2,7 @@
   <v-row class="mx-auto mt-14" style="width:80%">
     <v-col class="d-flex align-center">
       <div>
-        <p class="text-h4 font-weight-bold">
+        <p class="text-h4 font-weight-medium">
           Our History:
         </p>
         <p class="body-2">

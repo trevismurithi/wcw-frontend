@@ -1,7 +1,7 @@
 <template>
   <v-row class="mx-auto my-10" style="width:80%">
     <v-col>
-      <p class="text-h3 font-weight-bold">
+      <p class="text-h3 font-weight-medium">
         Our Process
       </p>
       <div v-for="(step,index) in steps" :key="index">
