@@ -13,7 +13,7 @@
         </p>
       </div>
       <div class="my-4">
-        <v-btn class="white--text my-4" color="#FF374F">
+        <v-btn class="white--text my-4 poppins-font" color="#FF374F">
           Learn more
         </v-btn>
         <p class="font-weight-light body-2 my-2">

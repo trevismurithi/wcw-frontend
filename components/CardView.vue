@@ -3,7 +3,7 @@
     <v-row class="my-6 mx-auto" style="width:70%">
       <v-col>
         <div style="width:80%">
-          <p class="text-h4 font-weight-bold">
+          <p class="text-h4 font-weight-medium">
             {{ heading }}
           </p>
           <p>

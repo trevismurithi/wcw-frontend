@@ -14,7 +14,7 @@
         <v-img src="/images/image-3.png" width="100%" />
       </v-col>
       <v-col class="d-flex flex-column justify-center">
-        <p class="text-h4 font-weight-bold mx-6">
+        <p class="text-h4 font-weight-medium mx-6">
           ACCESS TO MARKET
         </p>
         <p class="mx-6 body-2">
@@ -25,7 +25,7 @@
         <v-btn
           elevation="0"
           color="#FF374F"
-          class="white--text mx-6 py-6"
+          class="white--text mx-6 py-6 poppins-font"
           width="45%"
           @click.prevent="registerNow"
         >
