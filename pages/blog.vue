@@ -80,7 +80,7 @@ export default {
         },
         {
           image: 'category-5.png',
-          state: 'How To Talks'
+          state: '"How To", Talks'
         },
         {
           image: 'category.png',

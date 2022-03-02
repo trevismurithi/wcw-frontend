@@ -15,7 +15,7 @@
     <!-- call to action section -->
     <div
       class="d-flex flex-column justify-center my-10 align-center"
-      style="height:500px;background-image:url('/images/BG.png');background-size:cover;background-position:center;"
+      style="height:500px;background-image:url('/images/BG.jpg');background-size:cover;background-position:center;"
     >
       <p class="text-h3 white--text font-weight-medium text-center" style="width:50%">
         Are you ready to enhance your entrepreneurial skills, knowledge and confidence?

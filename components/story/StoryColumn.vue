@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col class="d-flex justify-space-around flex-column">
-      <image-text title="How To Talks" />
+      <image-text title="&quot;How To&quot;, Talks" />
       <image-text image="support-2.png" title="Publications" />
     </v-col>
     <v-col class="d-flex justify-space-around flex-column">

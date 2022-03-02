@@ -10,7 +10,7 @@
           Brought to you by Graca Machel Trust
         </v-card-text>
         <v-card-text class="text-center mx-auto text-h3" style="width:100%; color:#FF374F;">
-          A Pan-African Movement that inspires and equips female entrepreneurs to build wealth-generating businesses.
+          A Pan-African Movement that inspires,equips, and empowers female entrepreneurs to build wealth-generating businesses.
         </v-card-text>
         <v-card-text class="text-center mx-auto poppins-font" style="width:45%;">
           Connectiong 10,000+ women to transform their business and drive intra-Africa trade
