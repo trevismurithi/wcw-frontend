@@ -2,7 +2,7 @@
   <v-app-bar elevation="0" class="white">
     <v-app-bar-nav-icon />
     <v-spacer />
-    <v-toolbar-title v-for="(nav, index) in headers" :key="index" class="mx-3 text-h6">
+    <v-toolbar-title v-for="(nav, index) in headers" :key="index" class="mx-3 body-2 font-weight-bold">
       <nuxt-link :to="nav.path" style="color:black;text-decoration:none;">
         {{ nav.name }}
       </nuxt-link>
@@ -32,7 +32,7 @@ export default {
           path: '/about_us'
         },
         {
-          name: 'Online Courses',
+          name: 'IGNITE Accelerator',
           path: '/courses'
         },
         {
@@ -48,7 +48,7 @@ export default {
           path: '/business_directory'
         },
         {
-          name: 'Blog',
+          name: 'Publications',
           path: '/blog'
         },
         {
