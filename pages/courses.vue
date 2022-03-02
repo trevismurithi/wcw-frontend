@@ -40,7 +40,7 @@
     <image-right />
     <v-card elevation="0" width="100%" class="grey lighten-3 py-14">
       <div class="mx-auto mb-14 text-center pt-14" style="width:50%">
-        <p class="text-h3 font-weight-bold text-center" style="color:#FF374F">
+        <p class="text-h3 font-weight-medium text-center" style="color:#FF374F">
           Things you'll learn
         </p>
         <v-card-text class="body-2">

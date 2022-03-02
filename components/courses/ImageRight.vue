@@ -4,7 +4,7 @@
       <v-img src="/images/courses/grouped.svg" width="100%" />
     </v-col>
     <v-col class="d-flex flex-column justify-center">
-      <p class="text-h4 font-weight-bold mx-6" style="color:#FF374F">
+      <p class="text-h4 font-weight-medium mx-6" style="color:#FF374F">
         How Can I Apply?
       </p>
       <p class="mx-6 body-2">

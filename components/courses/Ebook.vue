@@ -5,7 +5,7 @@
         <v-img src="/images/courses/book.svg" width="70%" />
       </div>
       <div class="d-flex flex-column justify-center">
-        <p class="text-h6 white--text font-weight-bold">
+        <p class="text-h6 white--text font-weight-medium">
           Download our Free 2021/2022 eBook
         </p>
         <p class="body-2 white--text" style="width:85%">
@@ -13,7 +13,7 @@
         </p>
       </div>
     </div>
-    <v-btn class="mx-6 white--text" color="#FFCC18">
+    <v-btn class="mx-6 white--text poppins-font" color="#FFCC18">
       Download FREE eBook
     </v-btn>
   </v-card>
