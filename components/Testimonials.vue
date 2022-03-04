@@ -6,17 +6,19 @@
     <p class="text-h3 font-weight-medium text-center mx-auto" style="color:#FF374F;width:80%">
       400+ Women are loving the Women Creating Wealth Programme
     </p>
-    <div class="d-flex justify-space-around">
-      <v-card v-for="(user,index) in monials" :key="index" class="pa-6 rounded-lg" width="300px" outlined>
-        <v-img class="rounded-circle" :src="'/images/'+ user.image" width="50px" height="50px" />
-        <p class="body-2 my-4">
-          {{ user.text }}
-        </p>
-        <p class="font-weight-bold">
-          {{ user.name }}
-        </p>
-      </v-card>
-    </div>
+    <v-row>
+      <v-col v-for="(user,index) in monials" :key="index">
+        <v-card class="pa-6 rounded-lg" width="300px" outlined>
+          <v-img class="rounded-circle" :src="'/images/'+ user.image" width="50px" height="50px" />
+          <p class="body-2 my-4">
+            {{ user.text }}
+          </p>
+          <p class="font-weight-bold">
+            {{ user.name }}
+          </p>
+        </v-card>
+      </v-col>
+    </v-row>
   </div>
 </template>
 

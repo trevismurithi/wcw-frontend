@@ -78,7 +78,7 @@
     </div>
     <!-- end of the about us section -->
     <!-- Our patners section -->
-    <div class="mx-auto my-14" style="width:80%">
+    <div class="mx-auto my-14" style="width:100%">
       <v-card-text class="mx-auto text-h4 font-weight-medium my-4 text-center" style="color:#FF374F;">
         Our Patners and Sponsors
       </v-card-text>
