@@ -9,15 +9,26 @@
     <!-- connect and inspire section -->
     <card-view />
     <!-- access to market -->
-    <v-row class="my-6 mx-auto" style="width:70%">
+    <v-row class="my-6 mx-auto" :style="largeDevice?'width:70%':'width:100%'">
       <v-col style="width:50%">
         <v-img src="/images/image-3.png" width="100%" />
       </v-col>
       <v-col class="d-flex flex-column justify-center">
-        <p class="text-h4 font-weight-medium mx-6">
+        <p
+          class="text-h4 font-weight-medium mx-6"
+          :class="{
+            'text-h4':largeDevice,
+            'text-h5':smallDevice
+          }"
+        >
           ACCESS TO MARKET
         </p>
-        <p class="mx-6 body-2">
+        <p
+          :class="{
+            'mx-6 body-2':largeDevice,
+            'caption':smallDevice
+          }"
+        >
           A platform that facilitates market access through a
           business directory, market champions,
           highliting deal opportunities and industry engagement.
@@ -48,9 +59,15 @@
       sub-c3="Investors are in the business of putting money into companies that are growing."
     />
     <!-- big card with many images -->
-    <div class="mx-auto rounded-lg" style="background-color:#FF374F;width:80%">
-      <div class="mx-auto pt-10 text-center" style="width:60%">
-        <p class="white--text font-weight-medium text-h4">
+    <div class="mx-auto rounded-lg" :style="largeDevice?'background-color:#FF374F;width:80%':'background-color:#FF374F;width:100%'">
+      <div class="mx-auto pt-10 text-center" :style="largeDevice?'width:60%':'width:80%'">
+        <p
+          class="white--text font-weight-medium"
+          :class="{
+            'text-h4':largeDevice,
+            'text-h5':smallDevice
+          }"
+        >
           We have the support you are looking for
         </p>
         <p class="caption white--text">
@@ -63,8 +80,18 @@
       </div>
     </div>
     <div class="my-14">
-      <div class="mx-auto pa-4" style="width:50%">
-        <p class="text-h3 text-center font-weight-bold" style="color:#FF374F">
+      <div
+        class="mx-auto pa-4"
+        :style="largeDevice?'width:50%':'width:100%'"
+      >
+        <p
+          class="text-center font-weight-bold"
+          :class="{
+            'text-h3':largeDevice,
+            'text-h5':smallDevice
+          }"
+          style="color:#FF374F"
+        >
           Our Success Stories
         </p>
         <p class="body-2 font-weight-medium text-center">
@@ -100,6 +127,14 @@ export default {
           image: 'slide-3.png'
         }
       ]
+    }
+  },
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
     }
   }
 }

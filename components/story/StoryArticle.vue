@@ -4,7 +4,7 @@
     dark
     hide-delimiters
     class="my-10 mx-auto"
-    style="width:70%;"
+    :style="largeDevice?'width:70%;':'width:100%;'"
     next-icon="mdi-arrow-right"
     prev-icon="mdi-arrow-left"
   >
@@ -14,14 +14,23 @@
     >
       <v-sheet
         :color="color"
-        height="100%"
         tile
         class="d-flex justify-center"
       >
-        <v-card width="90%" class="ma-4 pa-10" elevation="10">
-          <div class="d-flex flex-row">
-            <div style="width:40%">
-              <div style="width:80%">
+        <v-card
+          width="90%"
+          :class="{
+            'ma-4 pa-10':largeDevice
+          }"
+          elevation="10"
+        >
+          <div
+            :class="{
+              'd-flex flex-row':largeDevice,
+            }"
+          >
+            <div :style="largeDevice?'width:40%':'width:100%'">
+              <div :style="largeDevice?'width:80%':'width:100%'">
                 <v-img src="/images/story/writer.png" />
               </div>
             </div>
@@ -62,7 +71,15 @@ export default {
       'white',
       'white'
     ]
-  })
+  }),
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
+    }
+  }
 }
 </script>
 <style>

@@ -1,18 +1,28 @@
 <template>
   <div>
-    <v-row class="my-6 mx-auto" style="width:70%">
+    <v-row class="my-6 mx-auto" :style="largeDevice?'width:70%':'width:100%'">
       <v-col>
-        <div style="width:80%">
-          <p class="text-h4 font-weight-medium">
+        <div :style="largeDevice?'width:80%':'width:100%'">
+          <p
+            class="font-weight-medium"
+            :class="{
+              'text-h4':largeDevice,
+              'text-h5':smallDevice
+            }"
+          >
             {{ heading }}
           </p>
-          <p>
+          <p
+            :class="{
+              'caption':smallDevice
+            }"
+          >
             {{ context }}
           </p>
         </div>
         <v-card
           class="mx-auto pa-2"
-          width="90%"
+          :width="largeDevice?'90%':'100%'"
           elevation="0"
         >
           <!-- first section -->
@@ -22,7 +32,12 @@
               <p class="text-subtitle font-weight-bold">
                 {{ subH }}
               </p>
-              <p class="text-body-2">
+              <p
+                :class="{
+                  'text-body-2':largeDevice,
+                  'caption':smallDevice
+                }"
+              >
                 {{ subC }}
               </p>
             </div>
@@ -34,7 +49,12 @@
               <p class="text-subtitle font-weight-bold">
                 {{ subH2 }}
               </p>
-              <p class="text-body-2">
+              <p
+                :class="{
+                  'text-body-2':largeDevice,
+                  'caption':smallDevice
+                }"
+              >
                 {{ subC2 }}
               </p>
             </div>
@@ -46,7 +66,12 @@
               <p class="text-subtitle font-weight-bold">
                 {{ subH3 }}
               </p>
-              <p class="text-body-2">
+              <p
+                :class="{
+                  'text-body-2':largeDevice,
+                  'caption':smallDevice
+                }"
+              >
                 {{ subC3 }}
               </p>
             </div>
@@ -99,6 +124,14 @@ export default {
     subC3: {
       type: String,
       default: 'Get ample opportunities for networking, thought leadership, and innovation, and potential to elevate you.'
+    }
+  },
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
     }
   }
 }
