@@ -1,5 +1,11 @@
 <template>
-  <div class="d-flex flex-row justify-space-around mx-auto my-6" style="width:80%">
+  <div
+    class="mx-auto my-6"
+    :class="{
+      'd-flex flex-row justify-space-around':largeDevice,
+    }"
+    :style="largeDevice?'width:80%':'width:90%'"
+  >
     <award :content="awards[0]" />
     <award :content="awards[1]" />
     <award :content="awards[2]" />
@@ -17,8 +23,15 @@ export default {
         'Emotional intelligence self and social awareness and skills',
         'Starting innovative business ventures']
     }
+  },
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
+    }
   }
-
 }
 </script>
 

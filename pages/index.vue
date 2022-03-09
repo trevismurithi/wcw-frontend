@@ -14,7 +14,7 @@
         <v-card-text
           class="text-center mx-auto"
           :class="{
-            'text-h6': $vuetify.breakpoint.smAndDown,
+            'text-h4': $vuetify.breakpoint.smAndDown,
             'text-h3': $vuetify.breakpoint.mdAndUp,
           }"
           style="width:100%; color:#FF374F;"

@@ -1,8 +1,15 @@
 <template>
   <div class="my-6 mx-auto" style="width:100%">
-    <div class="d-flex flex-row justify-space-between my-12 mx-auto" style="width:90%">
+    <div
+      class="my-12 mx-auto"
+      :class="{
+        'd-flex flex-row justify-space-between':largeDevice,
+        '':smallDevice
+      }"
+      :style="largeDevice?'width:90%':'width:100%'"
+    >
       <!-- right side content -->
-      <div class="" style="width:40%">
+      <div class="" :style="largeDevice?'width:40%':'width:100%'">
         <p class="text-h6 font-weight-bold grey--text">
           Develop your skills and confidence
         </p>
@@ -18,8 +25,14 @@
       <!-- pink divider -->
       <div class="my-4" style="background-color:#FF374F;width:2px;" />
       <!-- left side content -->
-      <div class="d-flex justify-center align-center" style="width:35%">
-        <div class="rounded-lg " style="border:2px solid black;width:80%">
+      <div class="d-flex justify-center align-center" :style="largeDevice ? 'width:35%' : 'width:100%'">
+        <div
+          class="rounded-lg "
+          :class="{
+            'my-4':smallDevice
+          }"
+          :style="largeDevice?'border:2px solid black;width:80%':'border:2px solid black;width:100%'"
+        >
           <v-card class="pa-4" rounded="lg">
             <div class="">
               <p class="font-weight-bold text-h6">
@@ -39,11 +52,23 @@
     <v-img src="/images/courses/two_people.png" />
     <image-right />
     <v-card elevation="0" width="100%" class="grey lighten-3 py-14">
-      <div class="mx-auto mb-14 text-center pt-14" style="width:50%">
-        <p class="text-h3 font-weight-medium text-center" style="color:#FF374F">
+      <div class="mx-auto mb-14 text-center pt-14" :style="largeDevice?'width:50%':'width:100%'">
+        <p
+          class="font-weight-medium text-center"
+          :class="{
+            'text-h3':largeDevice,
+            'text-h6':smallDevice
+          }"
+          style="color:#FF374F"
+        >
           Things you'll learn
         </p>
-        <v-card-text class="body-2">
+        <v-card-text
+          :class="{
+            'body-2':largeDevice,
+            'caption':smallDevice
+          }"
+        >
           We have compiled Ignite course keeping in mind all the fundamental and important aspects that you need to know.
         </v-card-text>
       </div>
@@ -121,10 +146,17 @@ export default {
         'know, find and grow your money'
       ]
     }
+  },
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
+    }
   }
 }
 </script>
-
 <style>
 
 </style>

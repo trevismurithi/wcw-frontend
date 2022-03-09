@@ -1,10 +1,16 @@
 <template>
-  <v-row class="my-14 mx-auto" style="width:70%">
-    <v-col style="width:50%">
+  <v-row class="my-14 mx-auto" :style="largeDevice?'width:70%':'width:100%'">
+    <v-col :style="largeDevice?'width:50%':'width:100%'">
       <v-img src="/images/courses/grouped.svg" width="100%" />
     </v-col>
     <v-col class="d-flex flex-column justify-center">
-      <p class="text-h4 font-weight-medium mx-6" style="color:#FF374F">
+      <p
+        class="text-h4 font-weight-medium mx-6"
+        :class="{
+          'text-h5':largeDevice,
+        }"
+        style="color:#FF374F"
+      >
         How Can I Apply?
       </p>
       <p class="mx-6 body-2">
@@ -38,7 +44,14 @@
 
 <script>
 export default {
-
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
+    }
+  }
 }
 </script>
 

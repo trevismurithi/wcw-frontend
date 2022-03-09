@@ -1,5 +1,13 @@
 <template>
-  <v-card width="30%" class="rounded px-4" elevation="0">
+  <v-card
+    :width="largeDevice?'30%':'100%'"
+    class="rounded "
+    :class="{
+      'px-4':largeDevice,
+      'px-2 my-1':smallDevice
+    }"
+    elevation="0"
+  >
     <div class="d-flex px-2">
       <v-icon class="text-h4" style="color:#FF374F">
         mdi-check-circle
@@ -18,6 +26,14 @@ export default {
     content: {
       type: String,
       default: 'How to improve yourself with small tasks.'
+    }
+  },
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
     }
   }
 }
