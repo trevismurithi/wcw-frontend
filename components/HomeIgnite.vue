@@ -2,22 +2,36 @@
   <v-row class="mx-auto my-14" style="width:80%">
     <v-col class="d-flex align-center justify-center">
       <v-card width="100%" elevation="0">
+        <!-- condition to display a smaller view for the headers -->
         <div class="py-4 rounded-lg" style="background-color:#E41A4A;">
-          <p class="text-h4 font-weight-medium white--text px-4" style="width:80%">
+          <p
+            class="white--text px-4"
+            :class="{
+              'text-h4 font-weight-medium': largeDevice,
+              'text-h6 font-weight-medium': smallDevice
+            }"
+            :style="largeDevice ? 'width:80%' : 'width:100%'"
+          >
             Ignite Accelerator Course (6-10 Months)
           </p>
         </div>
-        <p class="text-h4 py-4">
+        <p
+          class="py-4"
+          :class="{
+            'text-h4 font-weight-medium': largeDevice,
+            'text-h6 font-weight-medium': smallDevice
+          }"
+        >
           Blended Learning Digital Course
         </p>
-        <v-sheet class="mb-4" width="90%" outlined color="#E41A4A" rounded="lg">
-          <v-card class="pa-4" rounded="lg">
+        <v-sheet class="mb-4" :width="largeDevice ? '90%' : '100%'" outlined color="#E41A4A" rounded="lg">
+          <v-card class="pa-0" rounded="lg">
             <div class="text-center">
               <p class="font-weight-medium text-center text-h6">
                 5 Modules
               </p>
             </div>
-            <div class="mx-auto" style="width:60%">
+            <div class="mx-auto" :style="largeDevice ? 'width:60%' : 'width:80%'">
               <p v-for="(text,index) in list" :key="index" class="my-0 body-2 font-weight-light">
                 {{ index+1 }}. {{ text }}
               </p>
@@ -49,6 +63,14 @@ export default {
         'Winning markets',
         'know, find and grow your money'
       ]
+    }
+  },
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
     }
   }
 }

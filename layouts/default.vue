@@ -14,7 +14,15 @@ import AppFooter from '~/components/Footer.vue'
 
 export default {
   name: 'DefaultPage',
-  components: { AppHeader, AppFooter }
+  components: { AppHeader, AppFooter },
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
+    }
+  }
 }
 </script>
 

@@ -2,17 +2,30 @@
   <v-card width="100%" elevation="0">
     <v-card
       elevation="0"
-      width="80%"
+      :width="largeDevice?'80%':'100%'"
       class="mx-auto my-4"
     >
       <div>
-        <v-card-text class="text-center font-weight-medium grey--text text-h6">
+        <v-card-text
+          class="text-center font-weight-medium grey--text text-h6"
+        >
           Brought to you by Graca Machel Trust
         </v-card-text>
-        <v-card-text class="text-center mx-auto text-h3" style="width:100%; color:#FF374F;">
+        <v-card-text
+          class="text-center mx-auto"
+          :class="{
+            'text-h6': $vuetify.breakpoint.smAndDown,
+            'text-h3': $vuetify.breakpoint.mdAndUp,
+          }"
+          style="width:100%; color:#FF374F;"
+        >
           A Pan-African Movement that inspires,equips, and empowers female entrepreneurs to build wealth-generating businesses.
         </v-card-text>
-        <v-card-text class="text-center mx-auto poppins-font" style="width:45%;">
+        <!-- display text on large device -->
+        <v-card-text v-if="largeDevice" class="text-center mx-auto poppins-font" style="width:45%;">
+          Connectiong 10,000+ women to transform their business and drive intra-Africa trade
+        </v-card-text>
+        <v-card-text v-else class="text-center mx-auto poppins-font">
           Connectiong 10,000+ women to transform their business and drive intra-Africa trade
         </v-card-text>
         <!-- two buttons for register and more about us -->
@@ -29,10 +42,10 @@
           </v-col>
         </v-row>
       </div>
-      <v-img
-        src="/images/frame.png"
-      />
     </v-card>
+    <v-img
+      src="/images/frame-4.png"
+    />
     <!-- start about us section -->
     <div style="background-color:#E41A4A;">
       <v-row
@@ -85,9 +98,12 @@
       <partners-sponsors />
     </div>
     <!-- start what you will get -->
-    <v-card-text class="text-center mx-auto text-h4 font-weight-medium mt-14" style="width:50%; color:#FF374F;">
+    <p v-if="largeDevice" class="text-center mx-auto text-h4 font-weight-medium mt-14" style="width:50%; color:#FF374F;">
       What you Will Get
-    </v-card-text>
+    </p>
+    <p v-else class="text-center mx-auto text-h5 font-weight-medium mt-14" style="color:#FF374F;">
+      What you Will Get
+    </p>
     <container />
     <!-- end of what you will get -->
     <!-- Ignite Accelerator course -->
@@ -106,6 +122,14 @@ import HomeCommunity from '~/components/HomeCommunity.vue'
 export default {
   name: 'AppPage',
   components: { PartnersSponsors, Testimonials, HomeIgnite, HomeCommunity },
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
+    }
+  },
   methods: {
     registerNow () {
       this.$router.push('/signup')

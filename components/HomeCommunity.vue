@@ -1,7 +1,13 @@
 <template>
   <div>
     <div class="py-6 text-center mx-auto rounded my-6" style="background-color:#E41A4A;width:50%">
-      <p class="text-h4 white--text font-weight-medium my-0">
+      <p
+        class="text-h4 white--text font-weight-medium my-0"
+        :class="{
+          'text-h4 font-weight-medium': largeDevice,
+          'text-h6 font-weight-medium': smallDevice
+        }"
+      >
         Business Community (3 Years)
       </p>
     </div>
@@ -16,7 +22,7 @@
         <home-community-card :card="finance" />
       </v-col>
     </v-row>
-    <div class="mx-auto my-2 poppins-font" style="width:fit-content">
+    <div class="mx-auto my-6 poppins-font" style="width:fit-content">
       <v-btn class="mt-6" color="#E41A4A" outlined>
         Learn More
       </v-btn>
@@ -47,6 +53,14 @@ export default {
                     'showcasing and wealth management coaching.'
         }
       ]
+    }
+  },
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
     }
   }
 }

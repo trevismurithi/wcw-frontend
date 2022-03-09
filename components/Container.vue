@@ -9,20 +9,51 @@
           </div>
         </v-col>
         <v-col class="black">
-          <div class="d-flex flex-column justify-center pa-4" style="background-color:black;">
+          <div
+            class="d-flex flex-column justify-center pa-4"
+            :class="{
+              'pa-0': $vuetify.breakpoint.smAndDown,
+              'pa-4': $vuetify.breakpoint.mdAndUp,
+            }"
+            style="background-color:black;"
+          >
             <div class="my-4">
-              <p class="text-h5 white--text font-weight-medium">
+              <p
+                class="white--text font-weight-medium"
+                :class="{
+                  'body-2 font-weight-bold': $vuetify.breakpoint.smAndDown,
+                  'text-h5 font-weight-medium': $vuetify.breakpoint.mdAndUp,
+                }"
+              >
                 Enhanced Capacity to Grow
               </p>
-              <p class="body-2 white--text font-weight-light">
+              <p
+                class="body-2 white--text font-weight-light"
+                :class="{
+                  'caption': $vuetify.breakpoint.smAndDown,
+                  'body-2': $vuetify.breakpoint.mdAndUp,
+                }"
+              >
                 We strengthen women entrepreneurs' knowledge, confidence and desire to scale their business.
               </p>
             </div>
             <div class="my-4">
-              <p class="text-h5 white--text font-weight-medium">
+              <p
+                class="white--text"
+                :class="{
+                  'body-2 font-weight-bold': $vuetify.breakpoint.smAndDown,
+                  'text-h5 font-weight-medium': $vuetify.breakpoint.mdAndUp,
+                }"
+              >
                 Resources to Improve Business Formalisation
               </p>
-              <p class="body-2 white--text font-weight-light">
+              <p
+                class="white--text font-weight-light"
+                :class="{
+                  'caption': $vuetify.breakpoint.smAndDown,
+                  'body-2': $vuetify.breakpoint.mdAndUp,
+                }"
+              >
                 We provide tools and templates that help formalise a business and
                 develop systems and processes for operational efficiency and excellence.
               </p>
@@ -40,20 +71,51 @@
           </div>
         </v-col>
         <v-col class="black">
-          <div class="d-flex flex-column justify-center pa-4" style="background-color:black;">
+          <div
+            class="d-flex flex-column justify-center pa-4"
+            :class="{
+              'pa-0': $vuetify.breakpoint.smAndDown,
+              'pa-4': $vuetify.breakpoint.mdAndUp,
+            }"
+            style="background-color:black;"
+          >
             <div class="my-4">
-              <p class="text-h5 white--text font-weight-medium">
+              <p
+                class="white--text font-weight-medium"
+                :class="{
+                  'body-2 font-weight-bold': $vuetify.breakpoint.smAndDown,
+                  'text-h5 font-weight-medium': $vuetify.breakpoint.mdAndUp,
+                }"
+              >
                 Enhanced Capacity to Grow
               </p>
-              <p class="body-2 white--text font-weight-light">
+              <p
+                class="body-2 white--text font-weight-light"
+                :class="{
+                  'caption': $vuetify.breakpoint.smAndDown,
+                  'body-2': $vuetify.breakpoint.mdAndUp,
+                }"
+              >
                 We strengthen women entrepreneurs' knowledge, confidence and desire to scale their business.
               </p>
             </div>
             <div class="my-4">
-              <p class="text-h5 white--text font-weight-medium">
+              <p
+                class="white--text"
+                :class="{
+                  'body-2 font-weight-bold': $vuetify.breakpoint.smAndDown,
+                  'text-h5 font-weight-medium': $vuetify.breakpoint.mdAndUp,
+                }"
+              >
                 Resources to Improve Business Formalisation
               </p>
-              <p class="body-2 white--text font-weight-light">
+              <p
+                class="white--text font-weight-light"
+                :class="{
+                  'caption': $vuetify.breakpoint.smAndDown,
+                  'body-2': $vuetify.breakpoint.mdAndUp,
+                }"
+              >
                 We provide tools and templates that help formalise a business and
                 develop systems and processes for operational efficiency and excellence.
               </p>
