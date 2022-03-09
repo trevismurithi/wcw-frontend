@@ -1,6 +1,19 @@
 <template>
-  <div class="mx-auto d-flex flex-row my-10" style="width:80%">
-    <div class="white--text pa-6 rounded-lg mx-2" style="width:40%;background-color:#E41A4A">
+  <div
+    class="mx-auto my-10"
+    :class="{
+      'd-flex flex-row':largeDevice,
+    }"
+    style="width:80%"
+  >
+    <div
+      class="white--text rounded-lg"
+      :class="{
+        'mx-2 pa-6':largeDevice,
+        'pa-4 my-4': smallDevice
+      }"
+      :style="largeDevice ? 'width:40%;background-color:#E41A4A':'width:100%;background-color:#E41A4A'"
+    >
       <v-icon class="pa-2 text-h5 rounded-circle mb-6 mt-2" color="#E41A4A" style="background-color:white">
         mdi-calendar-check
       </v-icon>
@@ -16,7 +29,14 @@
         </p>
       </div>
     </div>
-    <div class="white--text px-6 py-4 rounded-lg mx-2" style="background-color:#F77733">
+    <div
+      class="white--text rounded-lg"
+      :class="{
+        'px-6 mx-2 py-4 ':largeDevice,
+        'pa-4':smallDevice
+      }"
+      style="background-color:#F77733"
+    >
       <v-icon class="pa-2 text-h5 rounded-circle mb-6 mt-2" color="#F77733" style="background-color:white">
         mdi-chart-line-variant
       </v-icon>
@@ -46,6 +66,14 @@ export default {
             'modelling reinforce our confidence that we too can be more and accomplish remarkable achievements.',
         'Mastery - Training & tools, implementations & practice build competencies & enhance confidence'
       ]
+    }
+  },
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
     }
   }
 }
