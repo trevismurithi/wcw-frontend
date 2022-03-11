@@ -1,8 +1,18 @@
 <template>
   <v-card class="mx-auto my-4 pa-4" width="80%" elevation="0">
-    <div class="d-flex flex-row justify-space-between align-center">
-      <div class="d-flex flex-row align-center" style="width:70%">
-        <div class="mx-4">
+    <div
+      :class="{
+        'd-flex flex-row justify-space-between align-center':largeDevice,
+        '':smallDevice
+      }"
+    >
+      <div
+        :class="{
+          'd-flex flex-row align-center':largeDevice
+        }"
+        :style="largeDevice?'width:70%':'width:100%'"
+      >
+        <div class="mx-4" :style="smallDevice?'width:30%':'width:30%'">
           <v-img src="/images/post/writer.png" />
         </div>
         <div class="pa-4">
@@ -39,7 +49,14 @@
 
 <script>
 export default {
-
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
+    }
+  }
 }
 </script>
 

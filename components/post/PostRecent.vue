@@ -1,5 +1,8 @@
 <template>
-  <v-card width="300px" elevation="0">
+  <v-card
+    width="300px"
+    :elevation="largeDevice?'0':'8'"
+  >
     <div>
       <v-img src="/images/post/recent.png" />
     </div>
@@ -19,7 +22,14 @@
 
 <script>
 export default {
-
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
+    }
+  }
 }
 </script>
 
