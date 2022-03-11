@@ -1,10 +1,11 @@
 <template>
-  <v-row class="mx-auto rounded" style="width:60%">
+  <v-row class="mx-auto rounded" :style="largeDevice?'width:60%':'width:100%'">
     <v-col class="pa-4">
       <p class="body-2">
         {{ firstLabel }}
       </p>
       <v-select
+        :style="largeDevice?'width:auto':'width:300px'"
         :label="firstEntry"
         outlined
         :items="countries"
@@ -15,6 +16,7 @@
         {{ secondLabel }}
       </p>
       <v-select
+        :style="largeDevice?'width:auto':'width:300px'"
         :label="secondEntry"
         outlined
         :items="items"
@@ -49,6 +51,14 @@ export default {
     countries: {
       type: Array,
       default: () => ['Kenya', 'Uganda', 'Tanzania', 'Zanzibar', 'South Africa']
+    }
+  },
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
     }
   }
 }

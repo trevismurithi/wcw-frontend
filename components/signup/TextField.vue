@@ -1,11 +1,12 @@
 <template>
-  <v-row class="mx-auto rounded" style="width:60%">
+  <v-row class="mx-auto rounded" :style="largeDevice?'width:60%':'width:100%'">
     <v-col class="pa-4">
       <p class="body-2">
         {{ firstLabel }}
       </p>
       <v-text-field
         outlined
+        :style="largeDevice?'width:auto':'width:300px'"
         :label="firstEntry"
       />
     </v-col>
@@ -39,6 +40,14 @@ export default {
     secondEntry: {
       type: String,
       default: 'Enter your last name'
+    }
+  },
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
     }
   }
 }
