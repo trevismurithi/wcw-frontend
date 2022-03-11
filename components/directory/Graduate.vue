@@ -1,6 +1,10 @@
 <template>
   <v-card class="d-flex flex-row my-14" elevation="10">
-    <div class="d-flex flex-row align-center">
+    <div
+      :class="{
+        'd-flex flex-row align-center':largeDevice
+      }"
+    >
       <div class="pa-4">
         <v-img class="rounded-circle my-2" :src="'/images/directory/'+image" />
         <div class="d-flex mt-6">
@@ -79,6 +83,14 @@ export default {
     year: {
       type: String,
       default: '2021'
+    }
+  },
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
     }
   }
 }

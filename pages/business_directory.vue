@@ -6,7 +6,7 @@
         <graduate v-for="(image, index) in graduates" :key="index" :image="image" />
       </v-col>
       <v-col>
-        <graduate v-for="(image, index) in graduates.reverse()" :key="index" :image="image" />
+        <graduate v-for="(image, index) in graduates" :key="index" :image="image" />
       </v-col>
     </v-row>
   </div>
