@@ -13,7 +13,6 @@
       class=""
       :class="{
         'd-flex flex-row':largeDevice,
-        '':smallDevie
       }"
     >
       <div class="pa-6">

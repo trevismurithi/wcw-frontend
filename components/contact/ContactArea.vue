@@ -1,7 +1,13 @@
 <template>
-  <div class="d-flex mx-auto my-6" style="width:65%">
+  <div
+    class="mx-auto my-6"
+    :class="{
+      'd-flex':largeDevice
+    }"
+    :style="largeDevice?'width:65%':'width:100%'"
+  >
     <div class="mx-4">
-      <v-img src="/images/contact/office.png" width="80%" />
+      <v-img src="/images/contact/office.png" :style="largeDevice?'width:80%':'width:30%'" />
     </div>
     <div>
       <!-- three components of location -->
@@ -43,6 +49,14 @@ export default {
           content: 'contact@gmthub.online'
         }
       ]
+    }
+  },
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
     }
   }
 }
