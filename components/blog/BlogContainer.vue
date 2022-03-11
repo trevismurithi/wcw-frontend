@@ -1,7 +1,7 @@
 <template>
   <v-hover>
     <template #default="{ hover }">
-      <v-card class="mx-auto rounded-lg" width="344">
+      <v-card class="mx-auto rounded-lg my-6" :width="largeDevice?'350px':'300px'">
         <v-img :src="'/images/blog/' + image" />
         <v-fade-transition>
           <v-overlay
@@ -38,6 +38,14 @@ export default {
     image: {
       type: String,
       default: 'image.png'
+    }
+  },
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
     }
   }
 }

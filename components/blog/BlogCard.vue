@@ -1,6 +1,13 @@
 <template>
-  <v-card class="d-flex flex-row mb-2" elevation="0">
-    <div style="width:35%">
+  <v-card
+    class="mb-2"
+    :class="{
+      'd-flex flex-row':largeDevice,
+      '':smallDevice
+    }"
+    elevation="0"
+  >
+    <div :style="largeDevice?'width:35%':'width:100%'">
       <v-img :src="'/images/blog/'+image" />
     </div>
     <div class="pa-6 d-flex flex-column justify-space-between" style="width:90%">
@@ -24,6 +31,14 @@ export default {
     image: {
       type: String,
       default: 'blog-2.png'
+    }
+  },
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
     }
   }
 }

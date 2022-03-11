@@ -2,7 +2,7 @@
   <v-sheet
     class="mx-auto grey lighten-4 rounded-lg"
     elevation="0"
-    width="90%"
+    :width="largeDevice?'90%':'100%'"
   >
     <v-slide-group
       v-model="model"
@@ -44,6 +44,14 @@ export default {
   data () {
     return {
       model: null
+    }
+  },
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
     }
   }
 }
