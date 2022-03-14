@@ -31,12 +31,12 @@
         <!-- two buttons for register and more about us -->
         <v-row class="my-6 mx-auto" style="width:50%">
           <v-col class="text-center">
-            <v-btn elevation="0" color="#FF374F" class="white--text poppins-font" @click.prevent="registerNow">
+            <v-btn elevation="0" color="#FF374F" class="white--text poppins-font" @click.prevent="registerNow('/signup')">
               Register Now
             </v-btn>
           </v-col>
           <v-col class="text-center">
-            <v-btn elevation="0" color="#FFCC18" outlined class="poppins-font px-4">
+            <v-btn elevation="0" color="#FFCC18" outlined class="poppins-font px-4" @click.prevent="registerNow('/about_us')">
               About Us
             </v-btn>
           </v-col>
@@ -106,10 +106,22 @@
     </p>
     <container />
     <!-- end of what you will get -->
+    <!-- parallax feature -->
+    <v-parallax
+      src="/images/frame-resize.png"
+    />
     <!-- Ignite Accelerator course -->
     <home-ignite />
+    <!-- parallax feature -->
+    <v-parallax
+      src="/images/frame.png"
+    />
     <!-- business community section -->
     <home-community />
+    <!-- parallax feature -->
+    <v-parallax
+      src="/images/frame-resize-2.png"
+    />
     <testimonials />
   </v-card>
 </template>
@@ -131,8 +143,8 @@ export default {
     }
   },
   methods: {
-    registerNow () {
-      this.$router.push('/signup')
+    registerNow (route) {
+      this.$router.push(route)
     }
   }
 }

@@ -24,8 +24,8 @@
         >
           Blended Learning Digital Course
         </p>
-        <v-sheet class="mb-4" :width="largeDevice ? '90%' : '100%'" outlined color="#E41A4A" rounded="lg">
-          <v-card class="pa-0" rounded="lg">
+        <v-sheet class="my-6" :width="largeDevice ? '90%' : '100%'" outlined color="#E41A4A" rounded="lg">
+          <v-card class="px-0 py-4" rounded="lg">
             <div class="text-center">
               <p class="font-weight-medium text-center text-h6">
                 5 Modules

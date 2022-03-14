@@ -87,7 +87,7 @@
                   'text-h5 font-weight-medium': $vuetify.breakpoint.mdAndUp,
                 }"
               >
-                Enhanced Capacity to Grow
+                Market and Investment Readiness
               </p>
               <p
                 class="body-2 white--text font-weight-light"
@@ -96,7 +96,8 @@
                   'body-2': $vuetify.breakpoint.mdAndUp,
                 }"
               >
-                We strengthen women entrepreneurs' knowledge, confidence and desire to scale their business.
+                We de-risk entrepreneurs in readiness for investment by focusing on compliance,
+                market savviness and pitch practice.
               </p>
             </div>
             <div class="my-4">
@@ -107,7 +108,7 @@
                   'text-h5 font-weight-medium': $vuetify.breakpoint.mdAndUp,
                 }"
               >
-                Resources to Improve Business Formalisation
+                Value-Generating Business Community
               </p>
               <p
                 class="white--text font-weight-light"
@@ -116,8 +117,8 @@
                   'body-2': $vuetify.breakpoint.mdAndUp,
                 }"
               >
-                We provide tools and templates that help formalise a business and
-                develop systems and processes for operational efficiency and excellence.
+                We support women entrepreneurs in regional business communities to achieve their growth plans,
+                network,increase their skill and work collaboratively to access markets and finance.
               </p>
             </div>
           </div>
