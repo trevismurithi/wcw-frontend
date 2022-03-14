@@ -7,22 +7,22 @@
     >
       <div class="pa-4">
         <v-img class="rounded-circle my-2" :src="'/images/directory/'+image" />
-        <div class="d-flex mt-6">
+        <!-- <div class="d-flex mt-6">
           <v-icon class="green--text darken-3">
             mdi-whatsapp
           </v-icon>
           <p class="caption  my-0 mx-2">
             {{ whatsapp }}
           </p>
-        </div>
-        <div class="d-flex">
+        </div> -->
+        <!-- <div class="d-flex">
           <v-icon style="color:#E41A4A">
             mdi-email
           </v-icon>
           <p class="caption my-0  mx-2">
             {{ email }}
           </p>
-        </div>
+        </div> -->
       </div>
       <div class="mx-2 my-4 d-flex flex-column">
         <p class="poppins-font">
@@ -34,7 +34,23 @@
         <p class="body-2">
           Industry: {{ industry }}
         </p>
-        <v-btn color="#E41A4A" outlined width="50%" class="poppins-font">
+        <v-btn
+          color="#E41A4A"
+          outlined
+          width="50%"
+          class="poppins-font"
+          @click="setInformation(
+            {
+              name: name,
+              company: company,
+              industry: industry,
+              country: country,
+              email: email,
+              whatsapp: whatsapp,
+              image: image
+            }
+          )"
+        >
           connect
         </v-btn>
         <div class="mx-auto d-flex justify-space-between mt-4" style="width:80%">
@@ -91,6 +107,21 @@ export default {
     },
     largeDevice () {
       return this.$vuetify.breakpoint.mdAndUp
+    }
+  },
+
+  methods: {
+    setInformation (object) {
+      this.$store.commit('updateCompany', {
+        name: object.name,
+        company: object.company,
+        industry: object.industry,
+        country: object.country,
+        email: object.email,
+        whatsapp: object.whatsapp,
+        image: object.image
+      })
+      this.$store.commit('updateDialog', true)
     }
   }
 }

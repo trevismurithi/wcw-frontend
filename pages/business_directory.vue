@@ -1,24 +1,27 @@
 <template>
   <div class="mx-auto" style="width:90%">
     <app-select />
-    <v-row>
+    <v-row v-for="(image, index) in graduates" :key="index">
       <v-col>
-        <graduate v-for="(image, index) in graduates" :key="index" :image="image" />
+        <graduate :image="image" />
       </v-col>
       <v-col>
-        <graduate v-for="(image, index) in graduates" :key="index" :image="image" />
+        <graduate :image="image" />
       </v-col>
     </v-row>
+    <!-- show dialog -->
+    <company-details />
   </div>
 </template>
 
 <script>
 import Graduate from '~/components/directory/Graduate.vue'
 import AppSelect from '~/components/directory/Select.vue'
+import CompanyDetails from '~/components/directory/Details.vue'
 
 export default {
   name: 'BusinessDirectory',
-  components: { AppSelect, Graduate },
+  components: { AppSelect, Graduate, CompanyDetails },
   data: () => {
     return {
       graduates: ['graduate.svg', 'graduate-2.svg', 'graduate-3.svg', 'graduate-4.svg', 'graduate-5.svg']
