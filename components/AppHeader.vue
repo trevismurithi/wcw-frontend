@@ -20,7 +20,7 @@
       <v-list>
         <v-list-item v-for="(nav, index) in headers" :key="index">
           <v-list-item-icon>
-            <v-icon>mdi-post</v-icon>
+            <v-icon>{{ nav.icon }}</v-icon>
           </v-list-item-icon>
           <v-list-item-content class="body-2">
             <nuxt-link :to="nav.path" style="color:black;text-decoration:none;">
@@ -60,35 +60,43 @@ export default {
       headers: [
         {
           name: 'Home',
-          path: '/'
+          path: '/',
+          icon: 'mdi-home'
         },
         {
           name: 'About Us',
-          path: '/about_us'
+          path: '/about_us',
+          icon: 'mdi-information'
         },
         {
           name: 'IGNITE Accelerator',
-          path: '/courses'
+          path: '/courses',
+          icon: 'mdi-school'
         },
         {
           name: 'Call-For-Application',
-          path: '/signup'
+          path: '/signup',
+          icon: 'mdi-format-align-justify'
         },
         {
           name: 'Community',
-          path: '/story'
+          path: '/story',
+          icon: 'mdi-account-group'
         },
         {
           name: 'Business Directory',
-          path: '/business_directory'
+          path: '/business_directory',
+          icon: 'mdi-subdirectory-arrow-right'
         },
         {
           name: 'News and Updates',
-          path: '/blog'
+          path: '/blog',
+          icon: 'mdi-book'
         },
         {
           name: 'Contact Us',
-          path: '/contact_us'
+          path: '/contact_us',
+          icon: 'mdi-contacts'
         }
       ]
     }

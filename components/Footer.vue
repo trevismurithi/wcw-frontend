@@ -23,25 +23,25 @@
           src="/images/country.svg"
           class="my-4"
           :class="{'mx-2':largeDevice, 'mx-auto':smallDevice}"
-          :width="largeDevice?'20%':'80%'"
+          :width="largeDevice?'20%':'50%'"
         />
         <v-img
           src="/images/country-2.svg"
           class="my-4"
           :class="{'mx-2':largeDevice, 'mx-auto':smallDevice}"
-          :width="largeDevice?'20%':'80%'"
+          :width="largeDevice?'20%':'50%'"
         />
         <v-img
           src="/images/country-3.svg"
           class="my-4"
           :class="{'mx-2':largeDevice, 'mx-auto':smallDevice}"
-          :width="largeDevice?'20%':'80%'"
+          :width="largeDevice?'20%':'50%'"
         />
         <v-img
           src="/images/country-4.svg"
           class="my-4"
           :class="{'mx-2':largeDevice, 'mx-auto':smallDevice}"
-          :width="largeDevice?'20%':'80%'"
+          :width="largeDevice?'20%':'50%'"
         />
       </div>
     </v-card>

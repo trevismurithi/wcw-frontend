@@ -1,5 +1,5 @@
 <template>
-  <div style="width:80%">
+  <div :style="largeDevice?'width:80%;':'width:100%;'">
     <p class="body-2 ml-1 font-weight-medium">
       {{ label }}
     </p>
@@ -21,6 +21,14 @@ export default {
     entry: {
       type: String,
       default: 'Enter your message'
+    }
+  },
+  computed: {
+    smallDevice () {
+      return this.$vuetify.breakpoint.smAndDown
+    },
+    largeDevice () {
+      return this.$vuetify.breakpoint.mdAndUp
     }
   }
 }

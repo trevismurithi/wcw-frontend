@@ -12,15 +12,19 @@
         Contact Us
       </p>
     </div>
-    <v-row>
+    <div
+      :class="{
+        'd-flex flex-row':largeDevice,
+      }"
+    >
       <!-- left side of the contact us page -->
-      <v-col>
+      <div>
         <contact-location />
         <contact-location />
         <contact-location />
-      </v-col>
+      </div>
       <!-- right side of the contact us page -->
-      <v-col>
+      <div :style="largeDevice?'width:50%;':'width:100%;'">
         <contact-field />
         <contact-field label="Last Name" entry="Enter your last name" />
         <contact-field label="Your Email" entry="Enter your email" />
@@ -32,8 +36,8 @@
         >
           send
         </v-btn>
-      </v-col>
-    </v-row>
+      </div>
+    </div>
   </div>
 </template>
 
