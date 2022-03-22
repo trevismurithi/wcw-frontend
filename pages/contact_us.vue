@@ -24,36 +24,147 @@
         <contact-location />
       </div>
       <!-- right side of the contact us page -->
-      <div :style="largeDevice?'width:50%;':'width:100%;'">
-        <contact-field />
-        <contact-field label="Last Name" entry="Enter your last name" />
-        <contact-field label="Your Email" entry="Enter your email" />
-        <contact-text-area />
+      <v-form ref="form" @submit.prevent="contactUs" :style="largeDevice?'width:50%;':'width:100%;'">
+        <!-- first name field -->
+        <div :style="largeDevice?'width:80%;':'width:100%;'">
+          <p class="body-2 ml-1 font-weight-medium">
+            First Name
+          </p>
+          <v-text-field
+            v-model="firstName"
+            :rules="firstNameRules"
+            outlined
+            label="Enter your first name"
+            color="#FF374F"
+          />
+        </div>
+        <!-- last name field -->
+        <div :style="largeDevice?'width:80%;':'width:100%;'">
+          <p class="body-2 ml-1 font-weight-medium">
+            Last Name
+          </p>
+          <v-text-field
+            v-model="lastName"
+            :rules="lastNameRules"
+            outlined
+            label="Enter your last name"
+            color="#FF374F"
+          />
+        </div>
+        <!-- email address field -->
+        <div :style="largeDevice?'width:80%;':'width:100%;'">
+          <p class="body-2 ml-1 font-weight-medium">
+            Email Address
+          </p>
+          <v-text-field
+            v-model="email"
+            :rules="emailRules"
+            outlined
+            label="Enter your email address"
+            color="#FF374F"
+          />
+        </div>
+        <!-- message field -->
+        <div :style="largeDevice?'width:80%;':'width:100%;'">
+          <p class="body-2 ml-1 font-weight-medium">
+            Message
+          </p>
+          <v-textarea
+            v-model="message"
+            :rules="messageRules"
+            outlined
+            label="Enter your message"
+            color="#FF374F"
+          />
+        </div>
         <v-btn
           class="white--text py-4 poppins-font"
           color="#FF374F"
+          type="submit"
           :width="largeDevice?'20%':'50%'"
         >
           send
         </v-btn>
-      </div>
+        <div 
+            class="pa-1 mt-4 rounded-lg white--text text-center" 
+            :class="rgbColor"
+            style="width:80%"
+            v-show="showErrorMessage"
+          >
+          <p class="mt-3">{{ errorMessage }}</p>
+        </div>
+      </v-form>
     </div>
   </div>
 </template>
 
 <script>
-import ContactField from '~/components/contact/ContactField.vue'
 import ContactLocation from '~/components/contact/ContactArea.vue'
-import ContactTextArea from '~/components/contact/ContactTextArea.vue'
 export default {
   name: 'AppContactUs',
-  components: { ContactField, ContactLocation, ContactTextArea },
+  components: { ContactLocation },
+  data: () => {
+    return {
+      firstName: '',
+      firstNameRules: [
+        val => !!val || 'name is required',
+        val => val.length>3 || 'character not less than 3',
+        val => val.length<25 || 'character not more than 25'
+      ],
+      lastName: '',
+      lastNameRules: [
+        val => !!val || 'name is required',
+        val => val.length>3 || 'character not less than 3',
+        val => val.length<25 || 'character not more than 25'
+      ],
+      email: '',
+      emailRules: [
+        val => !!val || 'email is required',
+        val => /.+@.+\..+/.test(val) || 'email has the wrong format'
+      ],
+      message: '',
+      messageRules: [
+        val => !!val || 'message is required',
+        val => val.length>10 || 'not be less than 10 characters',
+        val => val.length<60 || 'not greater than 60 characters'
+      ],
+      rgbColor: '',
+      errorMessage: '',
+      showErrorMessage: false
+    }
+  },
   computed: {
     smallDevice () {
       return this.$vuetify.breakpoint.smAndDown
     },
     largeDevice () {
       return this.$vuetify.breakpoint.mdAndUp
+    }
+  },
+  methods: {
+    async contactUs () {
+      if(this.$refs.form.validate()){
+          try{
+                await this.$axios.post('http://192.168.100.46:4000/details',{
+                firstname: this.firstName,
+                lastname: this.lastName,
+                email: this.email,
+                message: this.message
+              })
+              this.errorMessage = 'message sent successfully'
+              this.rgbColor = 'green darken-2'
+              this.showErrorMessage = true
+              // empty all the string models
+              this.firstName = ''
+              this.lastName = ''
+              this.email = ''
+              this.message = ''
+          }catch(error){
+            this.errorMessage = 'request failed. Try again later'
+            this.rgbColor = 'red darken-1'
+            this.showErrorMessage = true
+          }    
+      }
     }
   }
 }
