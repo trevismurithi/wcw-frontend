@@ -9,7 +9,8 @@ module.exports = {
     requireConfigFile: false
   },
   extends: [
-    'plugin:nuxt/recommended'
+    'plugin:nuxt/recommended',
+    'plugin:nuxt/base'
   ],
   plugins: [
   ],
