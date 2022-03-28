@@ -77,9 +77,9 @@ export default {
     },
   computed: {
     loading () {
-        // if (!!this.$cookies.get(this.$store.state.login.userAuth)) {
-        //    this.$router.push('/') 
-        // }
+        if (!!this.$cookies.get(this.$store.state.login.userAuth)) {
+           this.$router.push('/blog') 
+        }
         return this.$store.state.login.loading
     },
     message () {

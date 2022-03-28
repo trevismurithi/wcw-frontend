@@ -102,6 +102,12 @@
 import {mapMutations} from 'vuex'
 
 export default {
+    middleware({app, store, redirect }) {
+      // If the user is not authenticated
+      if (!!app.$cookies.get(store.state.login.userAuth)) {
+        return redirect('/')
+      }
+    },
   data: () => {
     return {
             fullName: 'test12',

@@ -68,16 +68,16 @@ export default {
           path: '/about_us',
           icon: 'mdi-information'
         },
-        {
-          name: 'IGNITE Accelerator',
-          path: '/courses',
-          icon: 'mdi-school'
-        },
-        {
-          name: 'Call-For-Application',
-          path: '/signup',
-          icon: 'mdi-format-align-justify'
-        },
+        // {
+        //   name: 'IGNITE Accelerator',
+        //   path: '/courses',
+        //   icon: 'mdi-school'
+        // },
+        // {
+        //   name: 'Call-For-Application',
+        //   path: '/signup',
+        //   icon: 'mdi-format-align-justify'
+        // },
         {
           name: 'Community',
           path: '/story',
