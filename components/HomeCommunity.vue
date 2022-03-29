@@ -23,7 +23,7 @@
       </v-col>
     </v-row>
     <div class="mx-auto my-6 poppins-font" style="width:fit-content">
-      <v-btn class="mt-6" color="#E41A4A" outlined>
+      <v-btn class="mt-6" color="#E41A4A" outlined @click.prevent="navigateTo">
         Learn More
       </v-btn>
     </div>
@@ -61,6 +61,11 @@ export default {
     },
     largeDevice () {
       return this.$vuetify.breakpoint.mdAndUp
+    }
+  },
+  methods: {
+    navigateTo () {
+      this.$router.push('/story');
     }
   }
 }

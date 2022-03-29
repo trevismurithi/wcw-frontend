@@ -170,7 +170,7 @@ export default {
   },
   methods: {
     registerNow () {
-      this.$router.push('/signup')
+      this.$router.push('/application')
     }
   }
 }

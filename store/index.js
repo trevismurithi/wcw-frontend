@@ -5,7 +5,6 @@ export const state = () => ({
   country: '',
   email: '',
   whatsapp: '',
-  image: '',
   dialog: false,
   authErrorMessage: '',
   showErrorMessage: false,
@@ -23,7 +22,6 @@ export const mutations = {
     state.country = object.country
     state.email = object.email
     state.whatsapp = object.whatsapp
-    state.image = object.image
   },
 
   updateDialog (state, payload) {

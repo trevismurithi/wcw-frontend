@@ -98,6 +98,7 @@
           />
         </v-col>
       </v-row>
+      <!-- terms and condition section -->
       <div class="mx-auto pa-2" :style="largeDevice?'width:60%':'width:100%'">
         <p class="body-2">
           I understand that if I have deliberately provided false information or fall to meet

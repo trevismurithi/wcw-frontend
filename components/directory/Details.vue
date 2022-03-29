@@ -7,15 +7,10 @@
     >
       <v-card>
         <div>
-          <div class="pa-4 grey darken-1">
-            <v-btn color="white--text red" @click="closeDialog">
-              close
-            </v-btn>
-          </div>
-          <div class="d-flex justify-center grey darken-2">
-            <div style="width:80%">
-              <v-img class="my-6" :src="'/images/directory/'+getImage" />
-            </div>
+          <div class="pa-2">
+            <v-icon color="white--text red" @click="closeDialog">
+              mdi-close
+            </v-icon>
           </div>
           <div class="">
             <div>

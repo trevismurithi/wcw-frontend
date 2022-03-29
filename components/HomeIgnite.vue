@@ -38,7 +38,7 @@
             </div>
           </v-card>
         </v-sheet>
-        <v-btn class="mt-6 poppins-font" color="#E41A4A" outlined>
+        <v-btn class="mt-6 poppins-font" color="#E41A4A" outlined @click.prevent="navigateTo">
           Learn More
         </v-btn>
       </v-card>
@@ -71,6 +71,11 @@ export default {
     },
     largeDevice () {
       return this.$vuetify.breakpoint.mdAndUp
+    }
+  },
+  methods: {
+    navigateTo () {
+      this.$router.push('/courses');
     }
   }
 }

@@ -38,7 +38,7 @@
           color="#FF374F"
           class="white--text mx-6 py-6 poppins-font"
           width="45%"
-          @click.prevent="registerNow"
+          @click.prevent="navigateTo"
         >
           Register Now
         </v-btn>
@@ -136,6 +136,11 @@ export default {
     largeDevice () {
       return this.$vuetify.breakpoint.mdAndUp
     }
+  },
+  methods: {
+    navigateTo () {
+      this.$router.push('/application')
+    }   
   }
 }
 </script>

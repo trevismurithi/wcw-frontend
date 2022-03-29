@@ -80,7 +80,9 @@
               enterprises.
             </p>
             <div class="d-flex align-center" style="color:#FFCC18">
-              More About Us
+              <nuxt-link to="/about_us" style="color:#FFCC18;text-decoration:none">
+                More About Us
+                </nuxt-link>
               <v-icon style="color:#FFCC18">
                 mdi-arrow-right
               </v-icon>

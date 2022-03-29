@@ -34,7 +34,9 @@
       </p>
       <div class="mx-6 mt-4" style="width:fit-content">
         <p class="body-2 my-1" style="color:#FF374F;">
-          Calls for Application
+          <nuxt-link to="/application" style="color:#FF374F;text-decoration:none">
+            Calls for Application
+          </nuxt-link>
         </p>
         <div class="ma-0" style="background-color:#FF374F;width:100%;height:2px;" />
       </div>

@@ -1,5 +1,5 @@
 <template>
-  <v-stepper-content :step="1">
+  <v-stepper-content :step="step">
     <slot>
       nothing
     </slot>
@@ -8,7 +8,12 @@
 
 <script>
 export default {
-
+  props: {
+    step: {
+      type: Number,
+      default: 1
+    }
+  }
 }
 </script>
 
