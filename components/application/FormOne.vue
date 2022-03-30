@@ -1,5 +1,5 @@
 <template>
-    <form ref="form" @submit.prevent="submit">
+    <v-form ref="form" @submit.prevent="submit">
         <!-- personal user information section -->
         <v-stepper-step :step="1" :complete="stage > 1">
         Personal information
@@ -17,7 +17,7 @@
                     v-model="firstName"
                     :style="largeDevice?'width:auto':'width:300px'"
                     label="Enter your first name"
-                    :rules="firstNameRules"
+                    :rules="nameRules"
                 />
                 </v-col>
                 <v-col class="pa-4">
@@ -28,7 +28,7 @@
                     outlined
                     v-model="lastName"
                     label="Enter your last name"
-                    :rules="lastNameRules"
+                    :rules="nameRules"
                 />
                 </v-col>
             </v-row>
@@ -89,7 +89,7 @@
             click
         </v-btn>
         </stepper-content>
-    </form>
+    </v-form>
 </template>
 
 <script>
@@ -99,7 +99,8 @@ export default {
   components: { StepperContent },
   data () {
     return {
-      fullName: '',
+      firstName: '',
+      lastName: '',
       nameRules: [
           val => !!val || 'name is required',
           val => (val.length>3) || 'minimum 4 characters',
@@ -139,8 +140,17 @@ export default {
   },
   methods: {
       submit () {
-          this.stage = 2
-          console.log("This is the stage: ",this.stage);
+          if (this.$refs.form.validate()) {
+              this.stage = 2
+              this.$store.commit('application/updateFormOne', {
+                  firstName: this.firstName,
+                  lastName: this.lastName,
+                  email: this.email,
+                  phone: this.phone,
+                  company: this.company,
+                  street: this.address
+              })
+          }
       }
   }
 }

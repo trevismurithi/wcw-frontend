@@ -1,5 +1,5 @@
 <template>
-    <form ref="form" @submit.prevent="submit">
+    <v-form ref="form" @submit.prevent="submit">
         <!-- personal user information section -->
         <v-stepper-step :step="2" :complete="stage > 2">
           Business information
@@ -60,10 +60,10 @@
             </v-row>
         </v-card>
         <v-btn color="blue darken-2 white--text" type="submit">
-            click
+            submit
         </v-btn>
         </stepper-content>
-    </form>
+    </v-form>
 </template>
 
 <script>
@@ -75,7 +75,7 @@ export default {
     return {
       room: '',
       fieldRules: [
-          val => !!val || 'this is required'
+          val => !!val || 'field is required'
       ],
       city: '',
       state: '',
@@ -100,8 +100,15 @@ export default {
   },
   methods: {
       submit () {
-          this.stage = 1
-          console.log("This is the stage: ",this.stage);
+          if (this.$refs.form.validate()) {
+              this.$store.commit('application/updateFormTwo', {
+                  room:  this.room,
+                  city: this.city,
+                  state: this.state,
+                  code: this.code
+              })
+              console.log(this.$store.state.application.studentForm);
+          }
       }
   }
 }

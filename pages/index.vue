@@ -31,7 +31,7 @@
         <!-- two buttons for register and more about us -->
         <v-row class="my-6 mx-auto" style="width:50%">
           <v-col class="text-center">
-            <v-btn elevation="0" color="#FF374F" class="white--text poppins-font" @click.prevent="registerNow('/signup')">
+            <v-btn elevation="0" color="#FF374F" class="white--text poppins-font" @click.prevent="registerNow('/application')">
               Register Now
             </v-btn>
           </v-col>
@@ -52,7 +52,7 @@
         class="mb-2 pa-4 mx-auto"
         style="width:80%"
       >
-        <v-col class="d-flex justify-center pa-4">
+        <v-col v-if="largeDevice" class="d-flex justify-center pa-4">
           <div class="pa-4" style="width:80%">
             <v-img
               src="/images/about.png"
