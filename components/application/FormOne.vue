@@ -86,7 +86,7 @@
             </v-row>
         </v-card>
         <v-btn color="blue darken-2 white--text" type="submit">
-            click
+            next
         </v-btn>
         </stepper-content>
     </v-form>
