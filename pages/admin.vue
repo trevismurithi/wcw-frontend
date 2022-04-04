@@ -1,5 +1,5 @@
 <template>
-  <v-card color="#FF374F">
+  <v-card color="#FF374F" class="mt-14">
     <v-card-title class="text-center justify-center py-6">
       <h1 class="font-weight-bold text-h2 white--text">
         ADMIN
@@ -7,12 +7,21 @@
     </v-card-title>
     <!-- statistics section -->
     <div class="white pa-3 d-flex flex-row">
-        <v-card elevation="5" class="ma-2 grey--text" v-for="index in 4" :key="index">
+        <v-card elevation="5" class="ma-2 grey--text" v-for="(header, index) in statistics" :key="index">
             <div class="d-flex flex-row pa-3">
-                <v-icon>mdi-account</v-icon>
-                <div class="d-flex flex-row" style="cursor:pointer">
-                    <p class="mx-2 my-0 font-weight-bold title">Users:</p>
-                    <p class="my-0 title font-weight-regular">200</p>
+                <v-icon :class="header.color" >mdi-account</v-icon>
+                <div class="d-flex flex-row align-center" style="cursor:pointer">
+                    <p 
+                      class="mx-2 my-0 font-weight-bold body-1"
+                      :class="header.color" 
+                    >
+                      {{ header.name }}
+                    </p>
+                    <p 
+                      class="my-0 body-2 font-weight-bold"
+                    >
+                      {{ numberWithCommas(header.value) }}
+                    </p>
                 </div>
             </div>
         </v-card>
@@ -34,10 +43,10 @@
     <!-- first table -->
     <v-tabs-items v-model="tab">
       <v-tab-item>
-        <app-table-view />
+        <app-table-view :items="users" />
       </v-tab-item>
       <v-tab-item>
-        <app-table-view />
+        <app-table-view :items="participants" />
       </v-tab-item>
     </v-tabs-items>
   </v-card>
@@ -52,11 +61,53 @@ export default {
       return {
         tab: null,
         items: [
-          'users', 'participants',
+          'users', 'students',
         ],
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        statistics: [
+          {
+            name: 'Users',
+            value: 6000,
+            color: 'red--text'
+          },
+          {
+            name: 'Students',
+            value: 1245,
+            color: 'red--text'
+          },
+          {
+            name: 'Graduates',
+            value: 500,
+            color: 'red--text'
+          },
+          {
+            name: 'Admins',
+            value: 10,
+            color: 'red--text'
+          },
+        ],
+        users: [
+          {
+                    firstname: 'Samantha',
+                    lastname: 'Jones',
+                    email: 'samantha@jones.com',
+                    phone: '+254 724455453',
+          }
+        ],
+        participants: [
+          {
+                    firstname: 'Joseph',
+                    lastname: 'Jones',
+                    email: 'joseph@jones.com',
+                    phone: '+254 724455453',
+          }
+        ]
       }
     },
+    methods: {
+      numberWithCommas (value) {
+          return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+      }
+    }
 }
 </script>
 

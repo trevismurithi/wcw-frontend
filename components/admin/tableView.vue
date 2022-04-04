@@ -16,10 +16,10 @@
         </template>
         <template v-slot:item="row">
             <tr>
-                <td class="d-block d-sm-table-cell">{{row.item.name}}</td>
+                <td class="d-block d-sm-table-cell">{{row.item.firstname}}</td>
+                <td class="d-block d-sm-table-cell">{{row.item.lastname}}</td>
+                <td class="d-block d-sm-table-cell">{{row.item.email}}</td>
                 <td class="d-block d-sm-table-cell">{{row.item.phone}}</td>
-                <td class="d-block d-sm-table-cell">{{row.item.temp}}</td>
-                <td class="d-block d-sm-table-cell">{{row.item.time}}</td>
                 <td class="d-block d-sm-table-cell">
                     <!-- <v-btn 
                     @click="updateChild(row.item)"
@@ -33,7 +33,7 @@
                             mdi-dots-vertical
                             </v-icon>
                          </template>
-                        <v-list>
+                        <v-list style="cursor:pointer">
                             <v-list-item>
                                 <v-list-item-title @click.prevent="">
                                     admin
@@ -54,29 +54,32 @@
 
 <script>
 export default {
+    props: {
+        items: {
+            type: Array,
+            default: () => [{
+                    firstname: 'Samantha',
+                    lastname: 'Jones',
+                    email: 'samantha@jones.com',
+                    phone: '+254 724455453',
+            }]
+        }
+    },
     data () {
         return {
             search: '',
             loading: false,
             headers:[
                 {
-                    text:"Name",
-                    value:"name",
+                    text:"First Name",
+                    value:"firstname",
                     sortable:true
                 },
+                {text:"Last Name",value:"lastname"},
+                {text:"Email",value:"email"},
                 {text:"Phone",value:"phone"},
-                {text:"Temp(C)",value:"temp"},
-                {text:"Date",value:"time"},
                 {text:"Action",value:"none"},
             ],
-            items: [
-                {
-                    name: 'user',
-                    phone: '+254 73743474',
-                    temp: '23',
-                    time: '+GMT',
-                }
-            ]
         }
     },
     methods: {
