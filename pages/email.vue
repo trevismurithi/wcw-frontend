@@ -21,7 +21,7 @@
                 type="email"
                 :rules="emailRules"
                 outlined
-                label="Enter your email address"
+                label="Enter your email address."
                 color="#FF374F"
             />
             </div>
