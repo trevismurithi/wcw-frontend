@@ -25,7 +25,7 @@ export default {
   props: {
     content: {
       type: String,
-      default: 'How to improve yourself with small tasks.'
+      default: 'How to improve yourself with small tasks'
     }
   },
   computed: {
